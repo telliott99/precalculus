@@ -87,8 +87,6 @@ Frustum
 
 More geometry
 Hatbox Theorem
-Ceva's theorem
-Orthocenter
 Heron's formula
 Euclid's formula
 Sum of cubes
