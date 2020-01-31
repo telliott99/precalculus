@@ -1,0 +1,105 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Area}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+One aspect of calculus will be to determine the area of figures in the plane, particularly figures bounded by curves, as well as volumes in space.  This is the magic of calculus, that we can make curves conform to rectilinear concepts of area and volume.
+
+Since this introductory section is about Euclidean geometry, let's just say a few words about the area of a triangle.  But we'll start with the rectangle.
+
+To find the area of a rectangle, we must first fix a unit length.  Then multiply the width by the height.
+\begin{center} \includegraphics [scale=0.35] {area5.png} \end{center}
+This particular figure (from Lockhart) shows the distri butive law in action:
+\[ (3 + 5) \cdot (4 + 2) \]
+\[ =3 \cdot 4 + 3 \cdot 2 + 5 \cdot 4 + 5 \cdot 2 \]
+\[ = 48 \]
+Any combination of numbers that add up to $8$, times any combination of numbers that add up to $6$, gives the same result.
+
+The next figure is a parallelogram, a four-sided figure whose two pairs opposite sides are parallel (left panel).  As a consequence of the theorems we saw previously, the opposing angles are equal, and the adjacent angles add up to 180 degrees.
+\begin{center} \includegraphics [scale=0.4] {area7.png} \end{center}
+
+To find the area, we cut off a right triangle from the left and re-attach it on the right.  The angles add up to form a straight line along the base and a right triangle at the upper right.    The area is clearly $h \times b$.
+
+What about triangles?  Previously, we talked about an approach where any triangle can be divided into two right triangles.
+
+Alternatively, any triangle can be turned into a parallelogram, by attaching a rotated image of itself, like this:
+\begin{center} \includegraphics [scale=0.4] {area4.png} \end{center}
+
+It is easy to show that $\triangle ABC \cong \triangle ABC'$ and $\triangle DEF \cong \triangle DE'F$.  For example, by construction $AC$ is parallel to $BC'$ so $\angle ACB = \angle AC'B$.  We'll leave it to you to complete the proof.
+
+An acute triangle is on the left and an obtuse triangle on the right.  Since the area of each triangle is one-half that of its corresponding parallelogram (because we added the same area to make the parallelogram), the area of a triangle is one-half the base times the height.
+
+\begin{center} \includegraphics [scale=0.4] {area3.png} \end{center}
+
+In the figure above, the area is 
+
+\[ A = \frac{1}{2} \ af = \frac{1}{2} \ bg = \frac{1}{2} \ ch \]
+
+We can choose any side of the triangle to be the base and then multiply $1/2 \cdot$ base $\cdot$ height to get the area.  We must always get the same answer!
+
+If you accept the argument about the parallelogram above, it must be true, because the area of the triangle has to be the same no matter how you calculate it.  
+
+Here's a proof by counting up the area of smaller triangles:
+
+\begin{center} \includegraphics [scale=0.4] {area8.png} \end{center}
+
+In $\triangle ABC$ with sides $a,b,c$, drop the three altitudes from each of the three vertices to form right angles on the opposing sides.  Ceva's theorem says that these altitudes cross at a single point (we will prove this later).  Label the parts of the sides and the altitudes as shown in the diagram.
+
+The area of the whole $\triangle ABC$ is equal to the sum
+\[ \triangle BOC + \triangle AOC + \triangle AOB \]
+Using the rule, \emph{twice} the area is
+\[ 2A = af_1 + bg_1 + ch_1 \]
+
+But each of these smaller areas can be computed in different ways.  In particular $\triangle BOC$ can be viewed as having base $g_2$ and height $b_1$, while $\triangle AOB$ can be viewed as having base $b_2$ and height $g_2$, so (twice) the total area is also
+\[ 2A = b_1 g_2 + b_2 g_2 + b g_1 \]
+\[ = b g_2 + b g_1 = bg \]
+
+Similar calculations can be carried out for the other two sides.  Hence the area is the same regardless of which side is chosen as the base.
+
+$\square$
+
+A corollary is that all triangles with the same base and height have the same area.
+
+Draw two parallel lines.  Mark off equal distances between adjacent points $A$ through $J$ on the bottom.  Now pick any point on the top and draw the triangle with two \emph{equidistant} points on the bottom.  Any other triangle drawn with an equal base has the same area.
+
+\begin{center} \includegraphics [scale=0.4] {area2.png} \end{center}
+
+In this figure the areas of $\triangle PAB$, $\triangle PDE$, and $QDE$ are equal, as are $\triangle QHJ$ and $\triangle RFH$.  Further, the latter two have twice the area of any of the first three.
+
+\subsection*{platonic solids}
+
+\url{https://en.wikipedia.org/wiki/Platonic_solid}
+
+\begin{quote}
+In three-dimensional space, a Platonic solid is a regular, convex polyhedron. It is constructed by congruent (identical in shape and size) regular (all angles equal and all sides equal) polygonal faces with the same number of faces meeting at each vertex. Five solids meet these criteria.
+\end{quote}
+
+\begin{center} \includegraphics [scale=0.5] {platonic_solids.png} \end{center}
+These are:  (i) tetrahedron, (ii) cube, (iii) octagon, (iv) dodecagon, and (v) icosahedron.
+
+There is a wonderful, simple proof that there are only five of them.  Any solid requires at least three sides meeting at each vertex, otherwise the joint between two sides can just flap, like a hinge.  Furthermore, the total of all the vertex angles added up must be less than $360$ degrees, since otherwise the figure would be planar, not 3-dimensional.
+
+So, three equilateral triangles total $60 \times 3 = 180$, four total $60 \times 4 = 240$ and five total $60 \times 5 = 300$.  Six would be a hexagon lying in the plane.  Three squares total $90 \times 3 = 270$, while four give a square array in the plane.  Finally, three pentagons give $108 \times 3 = 324$.  And that's it.  Three hexagons would give $120 \times 3 = 360$, which gives an array in the plane.
+
+Proving that all the angles and side lengths come out correctly, so that the possible solids actually can be constructed is another matter, however.  Euclid devotes book XIII of \emph{The Elements} to this:
+
+\url{https://mathcs.clarku.edu/~djoyce/elements/bookXIII/bookXIII.html#props}
+
+
+\end{document}

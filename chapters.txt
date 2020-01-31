@@ -1,0 +1,97 @@
+# First
+
+Archimedes
+Introduction
+Area of a circle
+Volume of a cone
+Archimedes and the sphere
+
+Numbers and proof
+Integers
+Primes
+Prime factorization
+Induction
+Sum of integers
+
+Lines and triangles
+Lines and angles
+Congruent triangles
+Perpendicular bisector
+Special triangles
+Pentagon
+Euclid's Elements
+
+Right triangles
+Right triangles
+Area
+Pythagoras
+Hippocrates
+
+Circles
+Circle and triangle
+Pi is a constant
+Arcs of a circle
+Eratosthenes
+Circular orbits
+
+More number sets
+Rationals
+Infinity
+Euclid's algorithm
+Real numbers
+
+Algebra
+Basic algebra
+Exponential and logarithm
+Fibonacci sequence
+
+Analytic geometry
+Lines and slopes
+Circles again
+
+Trigonometry
+Six functions
+Sum of angles
+Law of cosines
+
+Two basic operations in calculus
+Simple slopes
+Easy pieces
+
+Basic calculus
+Difference quotients
+Limit concept
+Higher derivatives
+Differentials
+Fundamental theorem of calculus
+Sum of squares
+Riemann sums
+
+# Additions
+
+Conic sections
+Parabola
+Vector dot product
+Ellipse
+Hyperbola
+Headlight problem
+Rotation
+
+Archimedes
+Value of pi
+Archimedes circle proof
+Value of pi revisited
+Archimedes and pi
+Archimedes and quadrature
+Frustum
+
+More geometry
+Hatbox Theorem
+Ceva's theorem
+Orthocenter
+Heron's formula
+Euclid's formula
+Sum of cubes
+
+Addendum
+References
