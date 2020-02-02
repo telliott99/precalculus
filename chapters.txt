@@ -20,20 +20,27 @@ Perpendicular bisector
 Special triangles
 Pentagon
 Euclid's Elements
+Parallelograms
 
 Right triangles
 Right triangles
 Area
+Ceva's theorem
 Pythagoras
-Hippocrates
 
 Circles
 Circle and triangle
 Pi is a constant
 Arcs of a circle
-Special points
 Eratosthenes
 Circular orbits
+
+More geometry
+Similar triangles
+Special points
+Orthocenter
+Hippocrates
+Heron's formula
 
 More number sets
 Rationals
@@ -44,7 +51,7 @@ Real numbers
 Algebra
 Basic algebra
 Exponential and logarithm
-Fibonacci sequence
+Sum of cubes
 
 Analytic geometry
 Lines and slopes
@@ -77,6 +84,7 @@ Ellipse
 Hyperbola
 Headlight problem
 Rotation
+Hatbox Theorem
 
 Archimedes
 Value of pi
@@ -86,11 +94,9 @@ Archimedes and pi
 Archimedes and quadrature
 Frustum
 
-More geometry
-Hatbox Theorem
-Heron's formula
+Odds and ends
+Fibonacci sequence
 Euclid's formula
-Sum of cubes
 
 Addendum
 References
