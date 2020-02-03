@@ -18,44 +18,31 @@
 \maketitle
 \Large
 
-Some triangles are \emph{similar} but not congruent.
+To repeat what we said a few chapters ago, some triangles are \emph{similar} but not congruent.
 
 Similarity means that the three angles are the same but the triangles are of different overall sizes.  We might say that they are the same but \emph{scaled} differently.  
 
-We can call this AAA (angle-angle-angle).  For similar triangles, the three corresponding pairs of sides are in the same proportions, but re-scaled by a constant of proportion.
+We can call this AAA (angle-angle-angle).
 
 \begin{center} \includegraphics [scale=0.4] {similar.png} \end{center}
 
-$\circ$  Two triangles are similar if they have the same three angles. 
+$\bullet$  Two triangles are similar if they have the same three angles. 
 
 Because of the angle sum theorem, if any two angles of a pair of triangles are known to be equal, then the third one must be equal as well.
 
-$\circ$  Two triangles are similar if they have two angles known to be equal. 
+$\bullet$  Two triangles are similar if they have two angles known to be equal. 
 
-Similar triangles have their sides in the same proportion.  This is known as the AAA similarity theorem.
+For similar triangles, the three corresponding pairs of sides are in the same proportions, but re-scaled by a constant of proportion.  This is known as the AAA similarity theorem.
 
-\subsection*{AAA similarity theorem}
-
-The main ingredient is the alternate interior angles theorem, which is an if and only if theorem:  such angles are equal $\iff$ there is a transversal of two parallel lines.
-
-\begin{center} \includegraphics [scale=0.4] {similar10.png} \end{center}
-
-Suppose we have $\triangle ABC$ and separately $\triangle ADE$ and we are given that the angles at the corresponding vertices are equal.
-
-So mark off lengths $AB$ and $AC$ inside the larger triangle.  
-
-We're given that $ \angle ABC =  \angle ADE$.  By the alternate interior angles theorem, $BC$ is parallel to $DE$.  By the same token, we're given that $ \angle ACB = \angle AED$, so again, we have $BC$ is parallel to $DE$.
-
-Suppose we're given $BC$ and $DE$ parallel.  We claim that
-\[ \frac{AB}{BD} = \frac{AC}{CE} \]
-
-Going backward is harder.  For the moment, I'm just going to assume the general case.  We will show next that it's true for the specific case that $AB = BD$ (the larger is twice the smaller in both dimensions).
+Before getting there we introduce another theorem.
 
 \subsection*{midline theorem}
 
-Earlier we said that in a triangle like the one in the figure below, if we are given that $BC$ is parallel to $DE$, then by the a combination of the alternate interior angles theorem and the vertical angles theorem, we can show that $\triangle ABC$ and $\triangle ADE$ have three angles the same.
+Theorem:  The line segment $BC$ connecting the midpoints of two sides of a triangle is parallel to the third side, and is congruent to half of it.
 
-Therefore, the triangles are similar.
+\begin{center} \includegraphics [scale=0.4] {similar11.png} \end{center}
+
+Earlier we said that in a triangle like the one in the figure below, if we are given that $BC$ is parallel to $DE$, then by the a combination of the alternate interior angles theorem and the vertical angles theorem, we can show that $\triangle ABC$ and $\triangle ADE$ have three angles the same.
 
 \begin{center} \includegraphics [scale=0.4] {similar6.png} \end{center}
 
@@ -81,13 +68,47 @@ By the isosceles triangle theorem, all the angles marked with red dots are equal
 
 \begin{center} \includegraphics [scale=0.4] {pgram2.png} \end{center}
 
-Now, finally, let us assemble one whole and two have parallelograms starting with the same figure.
+Now, finally, let us assemble one whole and two half parallelograms starting with the same figure.
 
 \begin{center} \includegraphics [scale=0.4] {pgram4.png} \end{center}
 
 By the properties of the parallelogram, if the adjacent sides $AB$ and $BD$ are equal, all the angles work out and we get four congruent triangles, so the adjacent sides of the large triangle all have equal segments as well.
 
 So finally, what about the case where the adjacent segments are not equal?  Good question!
+
+\subsection*{AAA similarity theorem}
+
+The proof comes in two parts, first for the angles, and then for the ratio of sides.
+
+The main theorem used for angle identity is the alternate interior angles theorem, which is an if and only if theorem:  such angles are equal $\iff$ there is a transversal of two parallel lines.
+
+\begin{center} \includegraphics [scale=0.4] {similar10.png} \end{center}
+
+Suppose we have $\triangle ABC$ and separately $\triangle ADE$ and we are given that the angle at vertex $A$ is the same for both, and when we draw $\triangle ABC$ on top of $\triangle ADE$, $BC$ is parallel to $DE$.
+
+By the alternate interior angles theorem, $\angle ABC =  \angle ADE$ and  $\angle ACB = \angle AED$.
+
+\begin{center} \includegraphics [scale=0.4] {similar6.png} \end{center}
+
+Proving that the ratios of sides are all the same is a bit harder and often not even done explicitly.  I found a good proof in Kiselev.
+
+\begin{center} \includegraphics [scale=0.25] {Kiselev166.png} \end{center}
+
+(Note:  he draws $\triangle BDE$ smaller than $\triangle BAC$).
+
+There are two cases.  The first is when the lengths of $BA$ and $BD$ are commensurable.  That is, there is some unit length such that for integers $m$ and $n$, $BD = m$ and $BA = n$.
+
+Divide the side as shown.  Draw lines parallel to $BC$ and $AC$.  
+
+Then $BE$ and $BC$ will be divided into congruent parts, $m$ and $n$ for each, respectively.  The same thing happens on the bottom.  It is clear that 
+\[ \frac{m}{n} = \frac{BD}{BA} = \frac{DE}{AC} = \frac{BE}{BC} \]
+
+The second case is shown in the right panel above.  $BD$ and $BA$ are not commensurate and there is some small remainder when dividing $m$ into $n$.  But 
+\[ \frac{m}{n} \approx \frac{BD}{BA}, \ \ \ \ \ \ \frac{m}{n} \approx \frac{DE}{AC}, \ \ \ \ \ \ \frac{m}{n} \approx  \frac{BE}{BC} \]
+
+And furthermore, by choosing $n$ larger, we can make the remainder as small as we please.  Thus we obtain, in the limit and $n$ gets very large:
+\[ \frac{m}{n} = \frac{BD}{BA} = \frac{DE}{AC} = \frac{BE}{BC} \]
+for the second case as well.
 
 \subsection*{another idea}
 

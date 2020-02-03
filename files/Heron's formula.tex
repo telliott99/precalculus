@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott_admin/Dropbox/Tex/png/}}
+\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Heron's Formula}
@@ -21,7 +21,7 @@
 
 Heron's Formula can be used to compute the area of a triangle from the lengths of its sides.  It is a simple formula that does not explicitly include the altitude $h$ or the parts of side $c$.
 \begin{center}
-\includegraphics [scale=0.5] {triangle.png}
+\includegraphics [scale=0.4] {triangle3.png}
 \end{center}
 
 If $s$ is the semi-perimeter
@@ -29,15 +29,19 @@ If $s$ is the semi-perimeter
 then
 \[ A = \sqrt{s + (s-a) + (s-b) + (s-c)} \]
 
-\subsection*{Lockhart's version}
+Proof.
+
+From Lockhart.
+
 \begin{center} \includegraphics [scale=0.5] {triangle2.png} \end{center}
-Here the triangle is labeled slightly differently than the one above.  The bottom side $c$ is split into $x$ and $y$.  We can write three equations:
+
+Side $c$ is split into $x$ and $y$.  We can write three equations:
 
 \[ x^2 + h^2 = a^2 \]
 \[ y^2 + h^2 = b^2 \]
 \[ x + y = c \]
 
-Our ultimate objective is an equation that contains only $a$, $b$ and $c$. Lockhart gives us a target for the first part of the derivation:
+Our objective is an equation that contains only $a$, $b$ and $c$. Lockhart gives us a target for the first part of the derivation:
 
 \[ 2xc = c^2 + a^2 - b^2 \]
 
@@ -79,17 +83,21 @@ the algebraic form of this measurement is aesthetically unacceptable. First of a
 Here's a start:
 \[ 16A^2 = (2ac)^2 - (c^2 + a^2-b^2)^2 \]
 
-This is much better, notice that we have only $a$, $b$ and $c$.
-
-We will now go through two difference of squares manipulations.  First
-
+This is much better.  We notice that it is a difference of squares.  First
 \[ 16A^2 = \ [ \ 2ac + (c^2 + a^2-b^2) \ ] \ [ \ 2ac - (c^2 + a^2-b^2) \ ]  \]
+
+But that has within it two squares, namely $(a + c)^2$ in the first term on the right-hand side, and $(a - c)^2$ in the second.
+
 \[ = \ [ \ (a + c)^2 -b^2) \ ] \ [ \ b^2 - (a - c)^2 \ ]  \]
 \[ =  (a + c + b)(a + c - b)(b + a - c)(b - a + c) \]
+
 So
 \[ A = \sqrt{\frac{a + b + c}{2}  \cdot \frac{a + c - b}{2}  \cdot \frac{a + b - c}{2}  \cdot \frac{-a + b + c}{2} } \]
 
-At this point, we recognize the semi-perimeter $s = (a + b + c)/2$ and then we see that each of the other terms is $s$ minus one of the sides
+At this point, we recognize the semi-perimeter $s = (a + b + c)/2$ and then we see that each of the other terms is $s$ minus one of the sides.  For example:
+\[ \frac{a + c + b}{2} - b = \frac{a + c + b - 2b}{2} = \frac{a + c - b}{2} \]
+
+So we obtain
 \[ A = \sqrt{s \cdot (s - a) \cdot (s - b) \cdot (s - c) } \]
 \subsection*{check}
 As a simple example, if we have a right triangle with sides 3,4,5, then the area is one-half of 3 times 4 = 6.  The semi-perimeter is s
@@ -100,4 +108,4 @@ We have
 \[ A =  \sqrt { 6 (6-5) (6-4) (6-3) } =  \sqrt { 6 (1) (2) (3) } = 6 \]
 
 
-\end{document}  
+\end{document}

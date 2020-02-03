@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott/Github/calculus_book/png/}}
+\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Irrational numbers}
@@ -144,15 +144,19 @@ Here we will look at one more, before considering a more general proof for all n
 
 Draw an isosceles triangle with side length $1$, then Pythagoras tells us that the hypotenuse is equal in length to $\sqrt{2}$ (left panel).
 
-Our hypothesis is that the length of the hypotenuse is a rational number, and that its ratio to the side is in "lowest terms".
+Our hypothesis is that this length is a rational number, and its ratio to the side is in "lowest terms".
 
-\begin{center} \includegraphics [scale=0.5] {sqrt2d.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {sqrt2e.png} \end{center}
 
-Now mark off the length of the side on the hypotenuse and erect a perpendicular (middle panel).  The new small triangle that is formed is also isosceles (it is a right triangle and it also contains one of the complementary angles of the original right triangle).  By hypothesis, its side length $s$ is the difference of two rational numbers, so it is a rational number.
+Mark off the length of the side (length $1$) on the hypotenuse, and erect a perpendicular (middle panel).  Also draw the line segment to the opposite vertex of the original triangle.
 
-Furthermore, the triangle with the red base and blue sides of length $1$ is isosceles (right panel), so by complementary angles the triangle with the red base and one side a dotted line has equal angles at its base and so is isosceles.  All the lengths marked $s$ are equal.
+The new small triangle that is formed containing the right angle and with side length $x$ in the middle panel is isosceles, because it is a right triangle, and it  contains one of the complementary angles of the original right triangle.
 
-Therefore, the hypotenuse of the new, small right triangle is a rational number, since it is equal to $1 - s$.
+By hypothesis, its side length $x$ is the difference of two rational numbers, so $x$ is a rational number.
+
+Furthermore, the \emph{other} small triangle is also isosceles.  Its base angles, when added to the equal angles of an isosceles triangle, form right angles.  This allows us to mark the side along the base as having length $x$ as well.
+
+Therefore, the hypotenuse of the new, small right triangle is a rational number, since it is equal to $1 - x$.
 
 We are back where we started, with an isosceles triangle that has all rational sides.  
 
@@ -160,20 +164,22 @@ It is clear that this process can continue forever.  The sides will never be in 
 
 \subsection*{general proof}
 
-I found a long algebraic proof of the general irrationality of roots and it is discussed \hyperref[sec:general_irrationality]{\textbf{here}}.  What follows is a much simpler proof based on the fundamental theorem of arithmetic.
+I found a long algebraic proof of the general irrationality of roots and I wrote it up the big calculus book.  But then I came upon simple elegant proof based on the fundamental theorem of arithmetic.
 
 We suppose that there exist two integers $a$ and $b$ such that 
 \[ (\frac{a}{b})^2 = n \]
 
-According to the fundamental theorem of arithmetic, both $a$ and $b$ have a unique prime factorization.  Suppose that gives $a = a_1 \cdot a_2 \dots a_i$ and likewise for $b$ so:
+Both $a$ and $b$ have a unique prime factorization.  Suppose that gives $a = a_1 \cdot a_2 \dots a_i$ and likewise for $b$ so:
 \[ (\frac{a_1 \cdot a_2 \dots a_i}{b_1 \cdot b_2 \dots b_j})^2 = n \]
 
-If every factor $b$ were some $a_i$, then we could cancel all of them and so $a/b$ would be an integer.
+There must be at least some $b_j$ which are not $a_i$, otherwise we could cancel all of them and so $a/b$ would be an integer.
 
-If $a/b$ is to be rational but not an integer, there must be at least one prime factor of $b$ that cannot be cancelled.  Call that (those) $q$, so in lowest terms we have
-\[ (\frac{a_1 \cdot a_2 \dots }{q_1 \dots})^2 = n \]
+Call that factor or factors $q$, so in lowest terms we have
+\[ (\frac{a_1 \cdot a_2 \dots }{q_1 \dots q_k})^2 = n \]
 
-But then, after squaring, we will have $q_1^2$ in the denominator and no corresponding factor of either $q_1$ or $q_1^2$ in the numerator.  Thus, they cannot be canceled and the result cannot be an integer.
+But then, after squaring, we will have $q_1^2$ (for example) in the denominator and no corresponding factor of either $q_1$ or $q_1^2$ in the numerator.  
+
+The $q_k$ cannot be canceled and so the result cannot be an integer.
 
 This proves that the only $n$ with rational square roots are perfect squares with integer roots.
 
@@ -181,9 +187,9 @@ The proof also applies generally to other powers like cube and the fourth and fi
 
 \subsection*{other irrational numbers}
 
-There are many other irrational numbers besides these square roots.  The proof that $e$ is irrational is easy, but since we haven't introduced the exponential yet we need to wait.  
+There are many other irrational numbers besides these square roots.  
 
-The proof that $\pi$ is irrational is a bit harder, so we defer that as well.
+The proof that $e$ is irrational is easy, but since we haven't introduced the exponential yet we need to wait.  The proof that $\pi$ is irrational is bit harder, we will skip that.
 
 \section*{density}
 
@@ -258,13 +264,48 @@ We showed previously that between any two rational numbers, including $0$ and th
 
 Three related statements are also true.
 
-$\circ$ for any two rational numbers one can find a real number which lies between them
+$\bullet$ for any two rational numbers one can find a real number which lies between them
 
-$\circ$ for any two real numbers one can find a rational number which lies between them
+$\bullet$ for any two real numbers one can find a rational number which lies between them
 
-$\circ$ for any two real numbers one can find a real number which lies between them
+$\bullet$ for any two real numbers one can find a real number which lies between them
 
-Proofs of these are readily accessible but will be given separately \hyperref[sec:continuum]{\textbf{here}}.
+Proofs of these are readily accessible but we'll do only one, for the sake of brevity.
+
+\subsection*{theorem}
+
+$\bullet$  Between any two rational numbers it is always possible to find a real number.
+
+Proof.
+
+We will find a \emph{particular} irrational in the interval $(a,b)$, where $a$ and $b$ are rational.  For $a < b$, we simply add to the number $a$ the following
+\[ c = \frac{b - a}{\sqrt{2}} = \frac{\sqrt{2}}{2}(b - a) \]
+
+$c$ is smaller than $b - a$ (because $\sqrt{2}/2 < 1$) so the result $a + c$ lies between $a$ and $b$.  
+
+We also know that $c$ is irrational, because $\sqrt{2}$ times any rational number is irrational.  Finally, $a + c$ is irrational because adding $\sqrt{2}$ times a rational number to any rational number produces an irrational number.
+
+Proof of the first preliminary requirement:  $\sqrt{2}$ times a rational is irrational.  Suppose for integer $p, q, r, s$ we have
+\[ \sqrt{2} \ \frac{p}{q} = \frac{r}{s} \]
+then
+\[ \sqrt{2} = \frac{rq}{ps} \]
+But the right-hand side is rational, so this is a contradiction.
+
+For the second requirement, again by contradiction suppose
+\[ \sqrt{2} \ \frac{p}{q} +  \frac{s}{t} = \frac{u}{v} \]
+for integer $p, q, r, s, u, v$.  But the right-hand side of
+\[ \sqrt{2} = \frac{q}{p} ( \frac{u}{v} - \frac{s}{t}) \]
+is rational, so this is a contradiction.
+
+$\square$
+
+Note in passing that powers are different.  What do you think about
+\[ r = \sqrt{2}^{\sqrt{2}} \]
+You may think $r$ is "likely" to be irrational.  Just a mess.  But how about
+\[ r^{\sqrt{2}} \]
+Whether $r$ is rational or irrational
+\[ r^{\sqrt{2}} = (\sqrt{2}^{\sqrt{2}})^{\sqrt{2}} = \sqrt{2}^2 = 2 \]
+
 
 This property of the real (and even the rational) numbers, that there is no closest number to any given number, accounts for virtually all of the theoretical difficulties in calculus which are solved by the use of limits and the apparatus of $\delta$ and $\epsilon$ or alternatively, neighborhoods.  We will get to that in a bit.
 
