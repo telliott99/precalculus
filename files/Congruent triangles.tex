@@ -18,17 +18,17 @@
 \maketitle
 \Large
 
-\subsection*{congruent triangles}
+\subsection*{congruence}
 
-$\bullet$  Two triangles are \emph{congruent} if and only if they have the same three side lengths.  This is often abbreviated SSS (side-side-side).  
+$\bullet$  Two triangles are \emph{congruent} if and only if they have the same three side lengths.  
 
-As we'll see, some other equalities are equivalent to (that is, they imply) congruence and SSS equality.
+Congruence is a fancy word for equal.  The condition we use is often abbreviated SSS (side-side-side).
 
-By this definition, a triangle and its mirror image are congruent.  The three triangles shown below are all congruent, even though two are flipped (they are mirror images of the other two).
+By this definition, a triangle and its mirror image are congruent.  The three triangles shown below are all congruent, even though two are flipped (they are mirror images).
 
 \begin{center} \includegraphics [scale=0.4] {congruent.png} \end{center}
 
-Having the same three sides means that the shape is the same, and all three angles are the same --- the shapes are superimposable, with the proviso that we allow the shape to be flipped over.
+Having three sides equal means that the shape is the same.  The three angles are also equal --- and the shapes are superimposable, with the proviso that we allow the shape to be flipped over.
 
 In addition to SSS (side-side-side), there are three other conditions that lead to congruence of two triangles when they are satisfied, namely
 
@@ -37,6 +37,8 @@ $\bullet$  SAS (side-angle-side)
 $\bullet$  ASA (angle-side-angle)
 
 $\bullet$  AAS (angle-angle-side)
+
+\subsection*{similarity}
 
 Some triangles are \emph{similar} but not congruent.
 
@@ -54,40 +56,60 @@ Similar triangles have their sides in the same proportion.  This is known as the
 
 \begin{center} \includegraphics [scale=0.4] {similar.png} \end{center}
 
-Given any triangle, draw a line parallel to one side, which also joins the other two sides.  The new triangle with that side as its base is similar to the given triangle.  Similarity means that all the angles are equal.
+Given any triangle, draw a line parallel to one side, which also joins the other two sides.  The new triangle with that side as its base is similar to the given triangle.
 
 \begin{center} \includegraphics [scale=0.25] {Thales_theorem_1.png} \end{center}
 
-In this example, these ratios are all equal
+In this example, these ratios are equal
 \[ \frac{AD}{AB} = \frac{AE}{AC} = \frac{DE}{BC}  \]
-\[ \frac{AD}{DB} = \frac{AE}{EC} = \frac{DE}{BC - DE}  \]
+and you can find others.
 
-There are some subtleties to similarity.  For now we will assume the theorem:  that AAA and sides in proportion are both the same as similarity.
+Statements about similarity:
+
+$\circ$ \ similar triangles have all three angles equal 
+
+$\circ$ \ if two similar triangles are superimposed, the two sides that do not coincide with each other, are parallel
+
+$\circ$ \ similar triangles have their similar sides in the same ratio
+  
+It is easy to see why the first two statements are equivalent.  Just use the alternate interior angles theorem.
+
+The third is harder.  For now we will assume the theorem:  that AAA and sides in proportion are both the same as similarity.
 
 \subsection*{constructions}
 
-The way I think about these conditions is to imagine trying to construct a triangle from the given information, and ask whether it is uniquely determined.  Suppose we know ASA.  The situation is thus:
+The way I think about the congruence conditions is to imagine trying to construct a triangle from the given information, and ask whether it is uniquely determined.  Suppose we know ASA.  The situation is thus:
 
 \begin{center} \includegraphics [scale=0.4] {ASA1.png} \end{center}
  
 Draw the known side, then using the known angles, start two other sides from the ends of that side.  They must cross at a unique point.  
 
-But... actually, if we start the two lines pointing below the horizontal, there is another solution, the mirror image.  This triangle is also congruent to the one above.
+But... actually, if we start the two lines from opposite ends of the horizontal
+
+\begin{center} \includegraphics [scale=0.4] {ASA4.png} \end{center}
+
+there is another solution, the mirror image.  These two triangles are congruent to the one above.
  
-\begin{center} \includegraphics [scale=0.4] {ASA2.png} \end{center}
+I'm tempted to add still another:
 
-If we know two angles we also know the third, because they must add to 180 degrees.  For this reason, ASA and AAS imply that we have exactly the same information, because we know all three angles and (this part is important) we also know \emph{which} two angles flank the known side.
+\begin{center} \includegraphics [scale=0.4] {ASA5.png} \end{center}
 
-Alternatively, it is enough to know which angle faces the known side.
+But this doesn't give anything new.  These are merely rotated versions of the ones above.  Congruent triangles include the two mirror images and that's it.
+
+If we know two angles we also know the third, because they must add to 180 degrees.  For this reason, ASA and AAS imply that we have exactly the same information, because we know all three angles and we know one side.  
+
+This restriction is crucial:  we must also know \emph{which} two angles flank the known side.  Alternatively, it is enough to know which angle is opposite to the known side.
  
 \subsection*{SAS, ASA, AAS but not ASS}
 
 SAS is very commonly used to prove congruence.  
 \begin{center} \includegraphics [scale=0.4] {SAS.png} \end{center}
 
-In this diagram, sides of equal length are indicated by one or more hash marks.  Equal angles are indicated by dots (another common method is to draw an arc with a hash across it).
+In this diagram, sides of equal length are indicated by one or more hash marks.  
 
-The other methods for proving congruence use two equal angles and a side.  Two equal angles imply the third angle is also equal (since they add to a half-circle or 180 degrees), so the two triangles are similar.  To prove they are congruent, It is important that the equal sides are flanked by the same angles, or equivalently, are opposite the same angle.
+Equal angles are usually indicated by dots in this book. (Dots are easier to place on the figures, and lend themselves to color-coding;  the common method for pencil and paper is to draw an arc with a hash across it).
+
+The other methods for proving congruence use two equal angles and a side.  Two equal angles imply the third angle is also equal (since they add to a half-circle or 180 degrees), so the two triangles are similar.  To prove they are congruent, we need one side.
 
 These methods using two angles are referred to as ASA
 \begin{center} \includegraphics [scale=0.4] {ASA3.png} \end{center}
@@ -95,9 +117,11 @@ These methods using two angles are referred to as ASA
  and AAS.
 \begin{center} \includegraphics [scale=0.4] {AAS.png} \end{center}
 
+Because AA implies AAA, these tell unambiguously which angle is opposite the known side.
+
 \subsection*{one that doesn't work}
 
-There is one set of three that doesn't work, that is ASS (angle-side-side).
+There is one set of three that doesn't work in the general case, that is ASS (angle-side-side).
 
 \begin{center} \includegraphics [scale=0.4] {angle_side_side.png} \end{center}
 

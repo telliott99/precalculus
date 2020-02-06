@@ -21,27 +21,36 @@
 
 \subsection*{perpendicular at a point}
 
-We often will wish to construct a line or line segment perpendicular to another line segment.  This may be specified to occur at a particular (given) point, either on the line, or not on the line.  
+It's common to want to construct a line segment perpendicular to another line segment.  The perpendicular might be specified to occur at a particular given point, either on the line, or alternatively through some other point not on the line.  
 
-For the first case, consider the horizontal line below (left panel) and suppose we know a point on the line $P$ and wish to construct the vertical line through $P$.  The procedure is to use the compass to mark off points $Q$ and $R$ on the line an equal distance from $P$.  
+For the first case, consider the horizontal line segment below.  Suppose we know a point $P$ on the line and wish to construct the vertical line through $P$.  
 
-This can be done by drawing a circle with center at $P$.
+Use the compass to mark off points $Q$ and $R$ on both sides, an equal distance from $P$.  This can be done by drawing a circle with center at $P$. The radius is $PR$ (also equal to $QP$).
 
-\begin{center} \includegraphics [scale=0.4] {perp_1.png} \end{center}
+\begin{center} \includegraphics [scale=0.4] {perp_7.png} \end{center}
 
-Using the compass again (right panel), find $S$ equally distant from $Q$ and $R$ ($QS = RS$).  This can be done by using the compass to draw slightly larger circles of the same radius on centers $Q$ and $R$.
+Find $S$ equally distant from $Q$ and $R$.  This can be done by using the compass to draw larger circles of the same radius on centers $Q$ and $R$.  Since we have the room, I've drawn much larger circles of radius equal to $QR$.
 
- The line segment $SP$ will be perpendicular to the line containing $QPR$.
+\begin{center} \includegraphics [scale=0.4] {perp_6.png} \end{center}
+The figure is rotated by 90 degrees to conserve vertical space on the page.
 
-There is a restriction in Euclid's Elements to a collapsible compass, one which loses its setting when lifted from the page.  
+$QS = RS$ because they are both radii of circles of equal radius.
 
-That might make it impossible to find $S$ as just stated.  However, one can simply draw a circle of radius exactly equal to $QR$ centered at $Q$ and another one with the same radius, centered at $R$.
+The line segment $SP$ will be perpendicular to the line containing $QPR$, because of theorems about triangles with two equal sides (isosceles) which we will prove later.
+
+\subsection*{collapsible compass}
+
+Note briefly that is a restriction in Euclid's \emph{Elements} to a \emph{collapsible} compass, which is a compass that loses its setting when lifted from the page.  That means that generally, you wouldn't be able to draw two circles of the same radius on different centers.
+
+We got around that restriction by drawing the circles on $Q$ and $R$ with the same radius $QR$.  
+
+We will call a compass that is able to hold its setting, a \emph{standard} compass, and explain why the distinction is important to Euclid in the chapter devoted to his book.  But we also note that within the first few pages of that book, it is shown how to use a collapsible compass to carry out the very construction we said we couldn't do, namely, construct two circles on $Q$ and $R$ with equal radius and that radius not equal to $QR$ or $QP$.
 
 \subsection*{bisect a line segment}
 
 Suppose that we had not known the point $P$ when we started the procedure above, but already had two points $Q$ and $R$.
 
-Then the line through $S$ and $T$ crosses $QR$ at its midpoint, and we have found the point $P$ that bisects $QR$.
+Then the line through $S$ and $T$ crosses $QR$ as a perpendicular at its midpoint, and we have found the point $P$ that bisects $QR$.
 
 \subsection*{perpendicular through a point}
 
@@ -49,7 +58,7 @@ Alternatively, suppose we know the line and the point $S$ but not $P$, and we wi
 
 \begin{center} \includegraphics [scale=0.35] {perp_2.png} \end{center}
 
-Also find $T$ such that $QT = RT$, using circles with radius $QR$ centered at $Q$ and $R$, as before.  
+Now repeat the previous construction, using $Q$ and $R$. 
 
 The line segment $ST$ is perpendicular to the line segment containing $QR$, and passes through $S$, as required.
 
@@ -83,7 +92,7 @@ $\bullet$ \ $O$ is equidistant from $Q$ and $R$.
 
 $\bullet$ \ $O$ is also equidistant from $Q$ and $S$.
 
-Therefore, $OQ = OR = OS$.  If we draw a circle on center $O$, it will pass through all three points.
+Therefore, $OQ = OR = OS$.  If we draw a circle on center $O$ with radius $OR$, it will pass through all three points.
 
 \begin{center} \includegraphics [scale=0.3] {perp_5.png} \end{center}
 
@@ -93,6 +102,6 @@ The point where the perpendicular bisectors cross has a special name, it is call
 
 \begin{center} \includegraphics [scale=0.5] {three_point_circle2.png} \end{center}
 
-There are other special points where interesting circles can be drawn.
+There are other special points where interesting circles can be drawn.  We'll talk about them in a bit.
 
 \end{document}

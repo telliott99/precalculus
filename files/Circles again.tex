@@ -21,13 +21,14 @@
 
 We now consider what are called quadratic forms, as distinguished from linear equations (i.e., for lines).  The quadratics contain a squared term (or a term that mixes $x$ and $y$).  
 \begin{center} \includegraphics [scale=0.5] {conic_sections.png} \end{center}
+
 The simplest example is the equation for a unit circle centered at the origin:
 \[ x^2 + y^2 = 1 \]
 
 Pythagoras tells us that for a point $(x,y)$, the square of the distance from the origin is $x^2 + y^2$.  This equation describes all the points whose distance from the origin is equal to $\sqrt{1} = 1$.  But all  the points equi-distant to a point form a circle.  We generalize
 \[ x^2 + y^2 = r^2 \]
 
-It is clear that when $y = 0$, $x = \pm \ r$.  $r$ is the radius of the circle.
+It is clear that when $y = 0$, $x = \pm \ r$, and when $x = 0$, $y = \pm \ r$.  $r$ is the radius of the circle.
 
 Now, what happens if we displace the unit circle from the origin so its center is at $(1,0)$?  What this amounts to is adding $1$ to the $x$ value of every point.  If we solve for $x$
 \[ x = \sqrt{1 - y^2} \]
@@ -151,31 +152,22 @@ if $D$ is like $2p$ we need to add something like $p^2$:
 Since we added $D^2/4$ on the left, we must also add it on the right.  We obtain
 \[ (x + \frac{D}{2})^2 + y^2 + F = \frac{D^2}{4} \]
 
-You don't believe me?  Multiply it out
-\[ x^2 + Dx +  \frac{D^2}{4} + y^2 + F = \frac{D^2}{4} \]
-To form $(x + D/2)^2$ on the left-hand side, we added $D^2/4$ (what we needed) to both sides.
-
-Again, the general equation for a quadratic is
+The general equation for a quadratic is
 \[ Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0 \]
 
 In starting to work with one of these, the first thing to do is to see if there is a term which "mixes" $x$ and $y$, that is, whether there is some term like $Bxy$.  If there is, we might think about rotating the curve so that it is in a standard orientation.  
 
-We'll talk about how to do that \hyperlink{rotation}{\textbf{here}}, in the context of the ellipse.  However, the approach is general.
-
 Let us assume we've done that, we relabel the new $A$, $C$ etc. and assume here that $B = 0$.
 
-Once in standard orientation, the next thing we might do is to translate the quadratic so that it is centered on the origin.  We do that by completing the square for both $x$ and $y$.  We did some of that in this chapter, and we'll talk more about it \hyperlink{completing_the_square}{\textbf{here}}
-in the context of the parabola.  Once again, however, the approach is general.
+Once in standard orientation, the next thing we might do is to translate the quadratic so that it is centered on the origin.  We do that by completing the square for both $x$ and $y$.  After that, consider cases:
 
-Cases:
-
-$\bullet$  Both $A$ and $C$ present, and $F < 0$.  If
+$\bullet$  Both $A$ and $C$ are non-zero, B = 0, and $F < 0$.  If
 
 $\ \ \circ$  $A$ and $C$ are both $> 0$:  it's an ellipse.
 
 $\ \ \circ$  $A$ and $C$ are of opposite signs:  it's a hyperbola.
 
-$\bullet$  $A$, $C$ and $F$ are all negative:  it's imaginary.
+$\ \ \circ$  $A$, $C$ and $F$ are all negative:  it's imaginary.
 
 $\bullet$  Only one squared term is present, but we still have the other variable
 
@@ -187,7 +179,9 @@ which has only $x=h$ and $y=k$ as a solution.  It's a point.
 
 \begin{center} \includegraphics [scale=0.8] {Hamming_6_2_3.png} \end{center}
 
-Here is another problem from Hamming.  We need to prove that the angle above is a right angle.  Suppose the equation of the circle is 
+Here is another problem from Hamming.  We need to prove that the angle above is a right angle. We know this is true from geometry.  But now we wish to practice are analytic geometry.
+
+Suppose the equation of the circle is 
 \[ x^2 + y^2 = a^2 \]
 The point on the circle is $(x_0,y_0)$.
 

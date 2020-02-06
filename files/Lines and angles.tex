@@ -22,17 +22,19 @@
 \subsection*{Euclid and the postulates}
 Greek geometry starts hundreds of years before Euclid, who was a contemporary of Alexander the Great (356-323 BC).  
 
-We know that Euclid lived after Plato (d 347 BC), and before Archimedes (b 287 BC).  Except that he worked in Alexandria, all other details of his life and death are shrouded in mystery.
+We know that Euclid lived after Plato (died 347 BC), and before Archimedes (born 287 BC).  Except that he worked in Alexandria, all other details of his life and death are shrouded in mystery.
 
-After more than 2000 years, Euclid's book \emph{Elements} is still an excellent place to begin surveying the foundations of geometry.  It is a textbook, an organized collection of what was known about the subject at the time, or at least, everything that a well-educated student should know.
+After more than 2000 years, Euclid's book \emph{Elements} is still an excellent place to begin surveying the foundations of geometry.  It is a textbook, an organized collection of everything that a well-educated student was expected to know about the subject at the time.
 
 \begin{center} \includegraphics [scale=0.3] {compass.png} \end{center}
 
 This book of consists of \emph{propositions}, which include constructions (geometric figures) drawn with a pencil on a piece of paper, using a straight-edge or a compass or both.  Often proofs of propositions build on previous items in the book.  Euclid does not prove everything.  Bertrand Russell was famously disappointed about that.
 
-Here are Euclid's first three postulates --- statements that are assumed to be true:
+Here are Euclid's first three postulates --- statements that he assumed to be true:
 
 $\bullet$  A straight line segment can be drawn joining any two points.
+
+\begin{center} \includegraphics [scale=0.4] {postulates.png} \end{center}
 
 $\bullet$   Any straight line segment can be extended indefinitely in a straight line.
 
@@ -40,23 +42,52 @@ $\bullet$   Given any straight line segment, a circle can be drawn having the se
 
 Let us assume these as well.  We will use them often.
 
-We finesse the difficulty in defining what is meant by \emph{straight} in the real world.  If you've ever done any carpentry, for example, you probably know that unknown edges are determined to be straight by comparison with a known straight edge.  We use an imaginary perfect straight-edge and draw a straight line as "the shortest distance between two points".
+We finesse the difficulty in defining what is meant by \emph{straight} in the real world.  If you've ever done any carpentry, you probably know that unknown edges are determined to be straight by comparison with another edge known to be straight.
+
+In geometry, we use an imaginary perfect straight-edge to draw a straight line as "the shortest distance between two points".
 
 The fourth postulate is:
 
-$\bullet$   All right angles are congruent, that is, equal to each other.
+$\bullet$  \ All right angles are congruent, that is, equal to each other.
 
-This one prompts a different question:  what is a \emph{right angle}?
+This one prompts two different questions.  The first one is:
 
-If one line segment (piece of a line) is drawn crossing a second one, forming their \emph{intersection}, let us refer to the angles formed on the same side of a line as \emph{supplementary} angles (also sometimes called adjacent angles).
+$\circ$  \ how do we measure an angle?
+
+\subsection*{measure of an angle}
+
+Consider the diagram below. One line segment is drawn crossing a second one, forming their \emph{intersection}
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_0.png} \end{center}
+
+Two angles are labeled.  One, $\phi$, is larger than the other one, $\theta$.  
+\[ \phi > \theta \]
+
+Writing the statement $\phi > \theta$ is easy, but the implication is that we have some way of talking about the \emph{measure} of an angle.
+
+Our answer is to construct a circle around the central point, and call the distance along the circumference between the points where the lines cross the circle, the measure of the angle.
+
+If that distance along the edge is larger for $\angle \phi$, then $\phi > \theta$.  In the left panel, the arc between $Q$ and $R$ (call it arc $QR$) is larger than arc $PQ$.
+
+\begin{center} \includegraphics [scale=0.4] {lines_angles_00.png} \end{center}
+
+We don't need to actually measure the arc.  
+
+Instead we can use a standard compass to lay off the linear distance from $Q$ to $R$ starting at $P$ (right panel).  Since $S$ is further around the circle, $\phi > \theta$.
+
+As for our second question:
+
+$\circ$  \ what is a \emph{right angle}?
+
+Let us call angles formed on the same side of a line, \emph{supplementary} angles (also sometimes called adjacent angles).
 
 \begin{center} \includegraphics [scale=0.4] {lines_angles_1.png} \end{center}
 
 On the left, one of the angles, $\phi$, is larger than the other one, $\theta$.  On the right, we have $\phi < \theta$.  
 
-The third possibility is that $\theta = \phi$.  The definition of a right angle is that 
+There is of course a third possibility, namely that $\theta = \phi$.  The definition of a right angle is that 
 
-$\bullet$ \ if two supplementary angles are equal, they are both right angles.  
+$\bullet$ \ if two supplementary angles are equal, then they are both right angles.  
 
 \begin{center} \includegraphics [scale=0.4] {lines_angles_2.png} \end{center}
 
@@ -64,13 +95,19 @@ A right angle is frequently designated by drawing a small square, as seen in the
 
 Regardless of whether $\theta < \phi$, $\theta > \phi$, or $\theta = \phi$, the sum of the two angles $\phi + \theta$ is equal to two right angles or 180 degrees.
 
+The convention that there are 360 degrees total in a circle dates to the time of the Babylonians (c. 2400 BC).
+
 There is nothing particularly special about using $90$ degrees as the measure of a right angle, $180$ degrees for any two supplementary angles including right angles, or $360$ degrees for one whole turn.
 
 Well, there is one thing:  there are \emph{approximately} 360 days in a year, which marks the sun's track across the sky.  
 
 In his book, \emph{Measurement}, Lockhart adopts the convention that a whole turn is equal to $1$.  
 
-Later, we'll see that one whole turn can be defined using a different unit of measure as $2 \pi$ \emph{radians}, and that convention turns out to be quite important for calculus.
+We'll just mention here that one whole turn can be defined using a different unit of measure as $2 \pi$ \emph{radians}, and that convention turns out to be quite important for calculus.
+
+\begin{center} \includegraphics [scale=0.35] {arcs11.png} \end{center}
+
+In the figure above, we \emph{define} the measure of the angle $s$ to be equal to the arc it sweeps out or subtends, $a$, in a circle of radius $1$, a \emph{unit} circle.  Angles are not lengths, but numerically, the measure of the angle is the measure of the arc.
 
 Now, consider those angles lying below the horizontal:
 
@@ -79,36 +116,84 @@ Now, consider those angles lying below the horizontal:
 We said that the sum of the two angles $\phi + \theta$ is equal to two right angles, but so are the sums $\theta' + \phi$ and $\theta + \phi'$, for the same reason.  As a result
 
 \[ \phi + \theta = \theta + \phi' \]
-We conclude that $\phi = \phi'$ and $\theta = \theta'$.  
+We conclude that 
+\[ \phi = \phi' \]
+and
+\[ \theta = \theta' \]
 
 This is called the \emph{vertical angle theorem}.
 
 On the right, if any one of the angles where two lines cross is a right angle, then all four are right angles.
 
+Finally, the idea is generalizable to more than just two angles.  In the figure below
+\begin{center} \includegraphics [scale=0.4] {lines_angles_000.png} \end{center}
+
+\[ s = \phi_1 + \phi_2 + \phi_3 + \phi_4 + \phi_5 \]
+\[ t = \theta_1 + \theta_2 + \theta_3 \]
+\[ s = t = \pi \]
+\[ s + t = 2 \pi \]
+
+Both sums are equal to two right angles.
+
+$\bullet$ \ when one or more lines cross a given line at the same point, the angles formed on one side of the given line have a total measure equal to two right angles.
+
+$\bullet$ \ the total of all the angles formed at that point is equal to four right angles.
+
 \subsection*{parallel postulate}
 
-So far, all this seems rather obvious.  The fifth and final postulate is more subtle:
+So far, all this seems rather obvious.  The fifth and final postulate is more subtle.
 
-$\bullet$   If two lines are drawn which intersect a third in such a way that the sum of the inner angles on one side is less than two right angles, then the two lines inevitably must intersect each other on that side if extended far enough.
-
-Line $1$ and line $2$ are parallel, if and only if, $A + C = B + D = 180 = 2$ right angles.
+In the figure, line $1$ and line $2$ are parallel, \emph{if and only if}
+\[ A + C = B + D = 180 = 2 \ \text{right angles} \]
 
 \begin{center} \includegraphics [scale=0.5] {alternate_interior_angles.png} \end{center}
+
+$\bullet$   If two lines are drawn which intersect a third in such a way that the sum of the inner angles on one side is less than two right angles, then the two lines inevitably must intersect each other on that side if extended far enough.
 
 This postulate is equivalent to what is known as the parallel postulate.
 
 \url{http://mathworld.wolfram.com/EuclidsPostulates.html}
 
-But we also know from the properties of two lines given above that the supplementary angles $A + B = 180$ add up to $180$ degrees. So
-\[ A + C = 180 = A + B \]
+\subsection*{alternate interior angles}
+
+We come to a very important theorem.
+
+In the figure above, the supplementary angles $A + B = 180$ also add up to $180$ degrees. So
+\[ A + B = 180 = A + C \]
 and then
-\[ C = B \]
+\[ B = C \]
 
 This is called the theorem on \emph{alternate interior angles} between two parallel lines.
 
-We note that adoption of this postulate is a choice.  The definition works for geometry in the flat plane.  
+\begin{center} \includegraphics [scale=0.4] {lines_angles_4.png} \end{center}
 
-But, consider a familiar situation where this is not true.  Suppose we are doing geometry on the surface of a sphere, such as the earth.
+In the figure above (left panel), we're given that the two horizontal lines are parallel.
+
+The indicated angles are equal because they are alternate interior angles of two parallel lines (parallel postulate).  
+
+In the middle panel, two additional equalities are established by the vertical angle theorem.  Then on the right, we use the supplementary angle theorem.
+
+Note that the conclusions for the angles marked with a red dot are also themselves consistent vertical angles and alternate interior angles.
+
+\subsection*{summary}
+
+Make sure you learn and understand each of these theorems:
+
+$\bullet$ \ supplementary angles
+
+$\bullet$ \ vertical angles
+
+$\bullet$ \ alternate interior angles
+
+$\bullet$ \ triangle sum
+
+Another point to remember:  these are two-way, \emph{if and only if} theorems.  So for example, if the two alternate interior angles of a traversal are equal, the two lines are parallel.
+
+\subsection*{flat geometry}
+
+Adoption of the parallel postulate is a choice.  The definition works for geometry in the flat plane.  
+
+But consider a familiar situation where this is not true.  Suppose we are doing geometry on the surface of a sphere, such as the earth.
 
 Then, two adjacent lines of longitude can be drawn so as to cross the equator at right angles, and the lines are parallel there, but they will meet (intersect) at the poles.  
 
@@ -126,7 +211,7 @@ $\bullet$   If equals are added to equals, then the wholes are equal.
 
 These seem quite reasonable.
 
-We will see how to proceed from the postulates and axioms to various proofs.  \emph{Given these assumptions}, we can prove theorems that must be true.
+We will see how to proceed from the postulates and axioms to various proofs.  Given these \emph{assumptions}, we can prove theorems that must be true.
 
 \subsection*{Thales}
 I'm a big fan of William Dunham's books --- several of them are listed in the References.  
@@ -162,19 +247,6 @@ In addition, for each vertex, the interior angle plus the exterior angle add up 
 \[ (s + s') + (t + t') + (u + u') = 3 \cdot 180 = 540 \]
 By subtraction
 \[ s + t + u = 180 \]
-
-\subsection*{summary}
-
-Make sure you understand each of these theorems:
-
-$\bullet$ \ supplementary angles
-
-$\bullet$ \ vertical angles
-
-$\bullet$ \ alternate interior angles
-
-$\bullet$ \ triangle sum
-
 
 
 \end{document}

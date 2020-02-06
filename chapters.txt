@@ -18,15 +18,13 @@ Lines and angles
 Congruent triangles
 Perpendicular bisector
 Special triangles
-Pentagon
+Right triangles
 Euclid's Elements
 
-Right triangles
-Right triangles
+Pythagoras
 Area
 Ceva's theorem
 Pythagoras
-Quadrilaterals
 
 Circles
 Circle and triangle
@@ -36,6 +34,7 @@ Eratosthenes
 Circular orbits
 
 More geometry
+Polygons
 Similar triangles
 Special points
 Orthocenter
@@ -50,7 +49,10 @@ Real numbers
 
 Algebra
 Basic algebra
-Exponential and logarithm
+Exponential
+Logarithms
+Sum of squares
+Sum of cubes
 
 Analytic geometry
 Lines and slopes
@@ -64,42 +66,12 @@ Law of cosines
 Two basic operations in calculus
 Simple slopes
 Easy pieces
-
-Basic calculus
 Difference quotients
-Limit concept
-Higher derivatives
-Differentials
-Fundamental theorem of calculus
-
-Riemann
-Sum of squares
-Sum of cubes
-Riemann sums
-
-# Additions
-
-Conic sections
-Parabola
-Vector dot product
-Ellipse
-Hyperbola
-Headlight problem
-Rotation
-Frustum
-Hatbox Theorem
 
 Archimedes
 Value of pi
-Archimedes circle proof
 Value of pi revisited
-Archimedes and pi
 Archimedes and quadrature
-
-Odds and ends
-Fibonacci sequence
-Euclid's formula
-Cubics
 
 Addendum
 References

@@ -25,11 +25,15 @@ A right triangle is a triangle containing one right angle.  Right angles (and ri
 
 Since we proved that the sum of the three angles in any triangle is equal to one straight line, by extension, the sum of angles in any triangle is also equal to two right angles.
 
-In the figure below, the angle at vertex $P$ is a right angle.  It is common to mark a right angle with a little square, as shown, but these are a pain to draw, so I will sometimes not do that.  The side opposite $P$, namely $c$, is the hypotenuse.
+In the figure below, the angle at vertex $P$ is a right angle.  It is common to mark a right angle with a little square, as shown, but these are a pain to draw, so I will often not do that.  The side opposite $P$, namely $c$, is the \emph{hypotenuse}.
 
 \begin{center} \includegraphics [scale=0.35] {right_triangle.png} \end{center}
 
-Since the sum of angles in a triangle is equal to two right angles, the sum of the angles $\theta$ and $\phi$ above is also equal to a right angle, or 90 degrees.  Angles $\theta$ and $\phi$ are said to be \emph{complementary}.  This fact is often exploited in proofs.
+Since the sum of angles in a triangle is equal to two right angles, the sum of the angles $\theta$ and $\phi$ above is also equal to one right angle, or 90 degrees.  
+
+Angles $\theta$ and $\phi$ are said to be \emph{complementary}.  This fact is often exploited in proofs.
+
+$\bullet$ \ the two smaller angles in a right triangle are complementary and add to 90 degrees.
 
 \subsection*{right triangles}
  
@@ -48,10 +52,10 @@ In the large right triangle above, we know that
 When we draw the perpendicular to the hypotenuse that goes through the upper vertex, that is an \emph{altitude} of the triangle.  Because of the right angle, we obtain two smaller right triangles.  Thus
 \[ s + t' = 90 \]
 \[ s' + t = 90 \]
-By subtracting appropriately we get
-\[ s - s' = 0 \]
-\[ s = s' \]
-and similarly for $t$ and $t'$.
+Hence
+\[ s + t = s + t' \]
+\[ t = t' \]
+and similarly for $s$ and $s'$.
 
 \subsection*{stacked triangles}
 
@@ -68,9 +72,7 @@ Further, $\triangle QRT$ and $\triangle OPQ$ are similar triangles.
 
 \label{sec:angle_bisector}
 
-With that background, we now consider a classic problem:  angle bisectors.  We saw previously how to construct one. 
-
-Now, consider the diagram below.
+With that background, we now consider a classic problem:  angle bisectors.
 \begin{center} \includegraphics [scale=0.4] {angle_bisector_r1.png} \end{center}
 Suppose we are given that the large triangle is a right triangle.  
 
@@ -93,9 +95,9 @@ Draw an altitude for the upper of the two small triangles, meeting the side of l
 
 \begin{center} \includegraphics [scale=0.4] {angle_bisector_r2.png} \end{center}
 
-The red triangle and the one directly above it are congruent (right panel).  They share a side (the hypotenuse of each), and they are right triangles with the same smaller angle $\theta$.  Therefore, the altitude we just drew has length $c$.
+The red triangle and the one directly above it are congruent (right panel).  They share a side (the hypotenuse of each), and they are right triangles with the same smaller angle $\gamma$.  Therefore, the altitude we just drew has length $c$.
 
-The small triangle with sides $c$ and $d$ (top) is similar to the original large triangle.  The reason is that they are both right triangles containing the smaller angle $\gamma$.
+The small triangle with sides $c$ and $d$ (at the top) is similar to the original large triangle.  The reason is that they are both right triangles containing the smaller angle $\gamma$.
 
 By similar triangles, we form equal ratios of the angle opposite $\gamma$ to the hypotenuse:
 
@@ -114,6 +116,6 @@ Here's the key point
 \[ \frac{a + b}{c + d} = \frac{b}{d} = \frac{a}{c} \]
 \begin{center} \includegraphics [scale=0.4] {angle_bisector_r5.png} \end{center}
 
-which is a surprising result and becomes important in looking at Archimedes method for approximating the value of $\pi$.
+which is a surprising result and becomes important later in looking at Archimedes method for approximating the value of $\pi$.
  
 \end{document}

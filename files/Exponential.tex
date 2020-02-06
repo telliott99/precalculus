@@ -1,0 +1,70 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Introduction to the exponential}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+\subsection*{Principal and interest}
+Suppose I put $100$ dollars in the bank, and the people at the bank say that after one year, they will give me an additional $\$10$ at that time.  They will pay $10\%$ interest for the year on the principal $P$ of $\$100$.
+
+However, suppose I bargain with them.  I get them to promise to pay me half the interest ($5\%$) at the six-month mark, and the rest after one year.  My account will hold $\$105$ after six months, and the interest due for the second half will be $5\%$ of $\$105$, which is $\$5.25$ for a total of $\$10.25$.
+
+The equation to describe this situation is that if the rate of interest for the year is $r$ and the year is broken up into $n$ periods when interest will be paid, the total amount at the end will be:
+\[ A = P(1 + \frac{r}{n})^n \]
+
+In the example, we have $r = 0.10$ and $n = 2$ so
+\[ A = 100 (1 + 0.05)^{2} = 110.25 \]
+
+This is compound interest.  If there are additional years $t$, the exponent will be $nt$ rather than $n$.
+
+And now we start wondering what happens if the bank pays every month so that $n=12$ or every day so $n=365$ or even every second.  What happens if the interest is compounded \emph{continuously}?
+\[ A = \lim_{n \rightarrow \infty} P \ [ \ (1 + \frac{r}{n})^{n} \ ] \]
+
+Now it turns out that in the limit as $n$ approaches $\infty$ these two expressions are equal
+\[ (1 + \frac{r}{n})^n = \ [ \ (1 + \frac{1}{n})^n \ ]^r \]
+The same factor $r$ can be either in the numerator of the second term inside or up in the exponent outside.  
+
+A quick proof is:
+\[ \lim_{n \rightarrow \infty} (1 + \frac{r}{n})^{n}  \]
+\[ = \lim_{n \rightarrow \infty} (1 + \frac{r}{n})^{(n/r)r} \]
+Define $m = n/r$ and so as $n \rightarrow \infty$, so does $m \rightarrow \infty$ and then we have
+\[ \lim_{m \rightarrow \infty} (1 + \frac{1}{m})^{(m)r} \]
+and the $r$ is outside.  $m$ is just a dummy variable so we write:
+\[ \lim_{n \rightarrow \infty} \ [ \  (1 + \frac{1}{n})^{n} \ ]^r \]
+
+$\square$
+
+Therefore, going back to what we were working on, let us bring out the factor $r$ and obtain
+\[ A = P(1 + \frac{1}{n})^{nr} \]
+\[ A = P \ [ \ (1 + \frac{1}{n})^{n} \ ] ^r \]
+
+Thus, the important question is, what is the value of this expression?
+\[ A = \lim_{n \rightarrow \infty} (1 + \frac{1}{n})^{n} \]
+
+It does not depend on $r$.  It will turn out that this limit is equal to the number $e$.
+\[ e = 2.71828\ 18284\ 59045 \dots \]
+
+That's really all we need to worry about with respect to $e$, for now.
+
+As far as general exponents go, I'm sure you know that:
+\[ x^a \ x^b = x^{a+b} \]
+\[ (x^a)^e = x^{ae} \]
+\[ x^{-a} = \frac{1}{x^a} \]
+\[ x^{1/2} = \sqrt{x} \]
+
+\end{document}

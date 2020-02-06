@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott_admin/Tex/png/}}
+\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Value of pi and Gregory}
@@ -20,7 +20,9 @@
 \Large
 \label{sec:Gregory}
 
-As discussed in a previous \hyperref[sec:Value_of_pi]{\textbf{chapter}}, Archimedes used paired inscribed and circumscribed polygons to develop an iterative procedure that can be used to calculate the value of $\pi$ \emph{to any desired accuracy}.  Although the method is beautiful, his argument is unwieldy in detail, so we used modern trigonometry to achieve the same result more economically.
+As discussed in a previous \hyperref[sec:Value_of_pi]{\textbf{chapter}}, Archimedes used paired inscribed and circumscribed polygons to develop an iterative procedure that can be used to calculate the value of $\pi$ \emph{to any desired accuracy}.  
+
+Although the method is beautiful, his argument is unwieldy in detail, so we used modern trigonometry to achieve the same result more economically.
 
 There are, in addition, two other sets of formulas that also reach this end, one based on perimeters, and the other on areas.  These formulas are intriguing because they are simple, and it is not surprising that they are connected.  
 
@@ -33,11 +35,9 @@ The corresponding formulas for inside ($a$) and outside ($A$) areas are (for a c
 \[ A' = 2 \frac{a'A}{a' + A} \]
 \[ a' = \sqrt{aA} \]
 
-Notice that these two similar sets of formulas are subtly different.  For example, to go from $p$ and $P$ to the primed version, we start with the first formula, while for area we must start with the square root.  Part of our purpose in this chapter is to show that this works.  (I must confess, I still do not have a simple explanation for \emph{why} it is true).
+Notice that these two similar sets of formulas are subtly different.  For example, to go from $p$ and $P$ to the primed version, we start with the first formula, while for area we must start with the square root.  Part of our purpose in this chapter is to show that this works.
 
 \subsection*{inspiration}
-
-Originally, I was thinking about trying to implement Archimedes actual method for calculating $\pi$.  However,  the details of the approach are pretty painful.  Instead, I worked through the problem using trigonometry.  
 
 It's striking that the formulas for the inside and outside perimeters are so simple, namely $n \sin \theta$ and $n \tan \theta$.  The rest just follows from the half-angle formulas.
 
@@ -57,7 +57,9 @@ I found this notation a bit awkward, so I substituted the versions given above:
 \[ a' = \sqrt{aA} \]
 \[ A' = 2 \frac{a'A}{a' + A} \]
 
-Here, we mainly follow the development from that page and its "proof without words".  One difference is that we will start with the geometry and work backward to the formulas.  Let's deal with the perimeter first and then do the area.
+Here, we mainly follow the development from that page and its "proof without words".  
+
+One difference is that we will start with the geometry and work backward to the formulas.  Another is that we will use quite a few words.  Let's deal with the perimeter first and then do the area.
 
 \subsection*{basic setup}
 \begin{center} \includegraphics [scale=0.3] {Gregory_r0.png} \end{center}
@@ -72,7 +74,13 @@ The precise scale does not matter to the argument (nor the value of $n$).  If it
 Two red lines comprise this sector's external perimeter $P$, while a single blue line is the inscribed perimeter $p$.  The lines of the external perimeter are both tangent to the circle, and the whole figure is symmetric in each sector, with one blue and two red lines.
 \begin{center} \includegraphics [scale=0.3] {Gregory_r1.png} \end{center}
 
-$\angle PSR$ is a right angle.  Proof:  we simply appeal to symmetry, or point out the congruent triangles.  Since $\phi = \theta/2$, we have SAS.
+$\angle PSR$ is a right angle.  
+
+Proof:  
+
+The perpendicular bisector to any chord is parallel to the tangent at the point where it intersects the circle.
+
+Alternatively, we simply appeal to symmetry, or point out the congruent triangles.  Since $\phi = \theta/2$, we have SAS.
 
 Next, draw the perimeters $p'$ and $P'$ for the polygon with $2n$ sides and sector angle $\phi = \theta/2$.
 
