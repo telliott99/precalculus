@@ -60,13 +60,9 @@ Here is an even better way to slice a cube
 
 \begin{center}\includegraphics [scale=0.5] {pyramid_cube.png}\end{center}
 
-When I first saw this, I thought it was a trick.  But in fact, we have produced $3$ identical square pyramids (they are called oblique because the apex is not in the center).
+When I first saw this, I thought it was a trick.  But in fact, we have produced $3$ identical pyramids (they are called oblique because the apex is not in the center).
 
 \url{http://www.math.brown.edu/~banchoff/Beyond3d/chapter2/section02.html}
-
-Here is a version in blocks:
-
-\begin{center} \includegraphics [scale=0.5] {sum_n2_2.png}\end{center}
 
 I know it sounds complicated but it's really not.
 
@@ -94,12 +90,12 @@ Good luck!  It is OK to eat the demonstration afterwards.
 
 \subsection*{cones}
 
-Of course, a pyramid is not a cone.  But it will turn out that the volume is independent of the shape of the base.  It just depends on the area.  This is proved by what seem to be "hand-waving" arguments before calculus.
+Of course, a pyramid is not a cone.  But it will turn out that the volume is independent of the shape of the base.  It just depends on the area.  This is proved by what seem to be hand-waving arguments before calculus.
 
-For example, there is Cavalieri's principle, also called the "method of indivisibles", or the "stack of quarters" argument.
+For example, there is Cavalieri's principle, also called the \emph{method of indivisibles}, or the stack of quarters argument.
 \begin{center}\includegraphics [scale=0.2] {volume_cone_quarters.png}\end{center}
 
-If we slice a volume into small segments and then slide the slices around, the volume doesn't change.  So we expect that a pyramid and a right pyramid of the same base and height have the same volume.
+If we slice a volume into small segments and then slide the slices around, the volume doesn't change.  So we expect that a pyramid and a right pyramid of the same base and height have the same volume, and this is in fact true.
 
 \url{https://en.wikipedia.org/wiki/Cavalieri's_principle}
 
@@ -135,18 +131,19 @@ Calculate the volume of the frustum as the difference between that of a larger c
 \[ V = cA(e + h) - cae \]
 
 Now, the area of the base of a cone is $\pi$ times the radius squared, and the radius is proportional to the height (depending on how sharply the side slants).  Hence
-\[ a = ke^2 \]
-The area of the small base is proportional to the height squared with proportionality constant $k$, and the same for the large one:
+\[ a = \pi r_2^2 = ke^2 \]
+
+The area of the small base is proportional to the height squared, and so is the large one, with the same proportionality constant:
 \[ A = k(e + h)^2 \]
-so we rearrange things
-\[ k = \frac{a}{e^2} =\frac{A}{(e+h)^2} \]
-Hence
-\[ \frac{\sqrt{a}}{e} = \frac{\sqrt{A}}{e + h} \]
+thus
+\[ \frac{a}{A} = \frac{ke^2}{k(e + h)^2} \]
+\[ \frac{\sqrt{a}}{\sqrt{A}} = \frac{e}{e + h} \]
 
 Let us manipulate this expression to find $e$ in terms of $h$.  It just requires a bit of facility with square roots:
 
 \[ \frac{\sqrt{A}}{\sqrt{a}} = \frac{e + h}{e} = 1 + \frac{h}{e} \]
-\[ \frac{h}{e} = \frac{\sqrt{A}}{\sqrt{a}} - 1 = \frac{\sqrt{A} - \sqrt{a}}{\sqrt{a}} \]
+\[ \frac{h}{e} = \frac{\sqrt{A}}{\sqrt{a}} - 1 \]
+\[ = \frac{\sqrt{A} - \sqrt{a}}{\sqrt{a}} \]
 \[ e = \frac{\sqrt{a}}{\sqrt{A} - \sqrt{a}} \cdot h \]
 
 And then
@@ -159,18 +156,20 @@ Substituting into what we had above for the volume:
 
 This really looks like a mess.  
 
-But suppose we let $m =  \sqrt{A}$ and $n =  \sqrt{a}$ and then
+But suppose we let $m =  \sqrt{A}$ and $n =  \sqrt{a}$ so
 \[ \sqrt{A} - \sqrt{a} = m - n \]
 then the numerator above is really just $m^3 - n^3$.    
 
-We can factor that, we get $m^3 - n^3 = (m-n)(m^2 + mn + n^2)$, which you can confirm by multiplying back out.  So the first term $(m-n)$ cancels the denominator.  We now have:
+We can factor that, we get 
+\[ m^3 - n^3 = (m-n)(m^2 + mn + n^2) \]
+which you can confirm by multiplying back out.  So the first term $(m-n)$ cancels the denominator.  We now have:
 
 \[ V = c (m^2 + mn + n^2) h \]
 \[ V = c (A + \sqrt{A} \sqrt{a} + a) h \]
 
-And, the punchline.  Consider what happens as $a$ gets larger and closer to $A$.
+Here's the point:  consider what happens as $a$ gets larger and closer to $A$.
 
-We say:  let $a \rightarrow A$.  But just say $a = A$.
+We say:  let $a \rightarrow A$.
 
 The expression in parentheses becomes $3A$.  Hence:
 \[ V = c(3A)h \]

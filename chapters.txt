@@ -16,8 +16,8 @@ Sum of integers
 Lines and triangles
 Lines and angles
 Congruent triangles
+Isosceles triangles
 Perpendicular bisector
-Special triangles
 Right triangles
 Euclid's Elements
 
@@ -49,6 +49,7 @@ Real numbers
 
 Algebra
 Basic algebra
+Fibonacci sequence
 Exponential
 Logarithms
 Sum of squares
@@ -57,21 +58,24 @@ Sum of cubes
 Analytic geometry
 Lines and slopes
 Circles again
+Parabola
+Ellipse
+Archimedes and quadrature
 
 Trigonometry
 Six functions
 Sum of angles
 Law of cosines
+Value of pi
 
 Two basic operations in calculus
 Simple slopes
 Easy pieces
 Difference quotients
-
-Archimedes
-Value of pi
-Value of pi revisited
-Archimedes and quadrature
+Limit concept
+Higher derivatives
+Differentials
+Fundamental theorem of calculus
 
 Addendum
 References

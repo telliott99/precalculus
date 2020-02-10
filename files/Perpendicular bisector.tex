@@ -19,56 +19,25 @@
 \maketitle
 \Large
 
-\subsection*{perpendicular at a point}
+\subsection*{altitude of an isosceles triangle}
 
-It's common to want to construct a line segment perpendicular to another line segment.  The perpendicular might be specified to occur at a particular given point, either on the line, or alternatively through some other point not on the line.  
+Consider this triangle.
+\begin{center} \includegraphics [scale=0.35] {isosceles3.png} \end{center}
+If we are given $QS = SR$, by the theorem on isosceles triangles, we know that the base angles are equal.  
 
-For the first case, consider the horizontal line segment below.  Suppose we know a point $P$ on the line and wish to construct the vertical line through $P$.  
+Alternatively, we will show soon that if the base angles are equal, then so are the sides.
 
-Use the compass to mark off points $Q$ and $R$ on both sides, an equal distance from $P$.  This can be done by drawing a circle with center at $P$. The radius is $PR$ (also equal to $QP$).
+Given that this is an isosceles triangle, suppose we are also given that $\angle SPR$ is a right angle.  Then we have two equal angles, three angles equal by the triangle sum theorem, plus a shared side.  
 
-\begin{center} \includegraphics [scale=0.4] {perp_7.png} \end{center}
+Therefore $\triangle QPS \cong \triangle PRS$, so the segments on the base are equal.  $QP = PR$.
 
-Find $S$ equally distant from $Q$ and $R$.  This can be done by using the compass to draw larger circles of the same radius on centers $Q$ and $R$.  Since we have the room, I've drawn much larger circles of radius equal to $QR$.
+Alternatively, suppose we are given that $QP = PR$.  Then $\triangle QPS \cong \triangle PRS$ by SSS.  Therefore $\angle QPS = \angle SPR$ and both are right angles by the supplementary angles theorem.
 
-\begin{center} \includegraphics [scale=0.4] {perp_6.png} \end{center}
-The figure is rotated by 90 degrees to conserve vertical space on the page.
+$\square$
 
-$QS = RS$ because they are both radii of circles of equal radius.
+\subsection*{bisector is the altitude of an isosceles triangle}
 
-The line segment $SP$ will be perpendicular to the line containing $QPR$, because of theorems about triangles with two equal sides (isosceles) which we will prove later.
-
-\subsection*{collapsible compass}
-
-Note briefly that is a restriction in Euclid's \emph{Elements} to a \emph{collapsible} compass, which is a compass that loses its setting when lifted from the page.  That means that generally, you wouldn't be able to draw two circles of the same radius on different centers.
-
-We got around that restriction by drawing the circles on $Q$ and $R$ with the same radius $QR$.  
-
-We will call a compass that is able to hold its setting, a \emph{standard} compass, and explain why the distinction is important to Euclid in the chapter devoted to his book.  But we also note that within the first few pages of that book, it is shown how to use a collapsible compass to carry out the very construction we said we couldn't do, namely, construct two circles on $Q$ and $R$ with equal radius and that radius not equal to $QR$ or $QP$.
-
-\subsection*{bisect a line segment}
-
-Suppose that we had not known the point $P$ when we started the procedure above, but already had two points $Q$ and $R$.
-
-Then the line through $S$ and $T$ crosses $QR$ as a perpendicular at its midpoint, and we have found the point $P$ that bisects $QR$.
-
-\subsection*{perpendicular through a point}
-
-Alternatively, suppose we know the line and the point $S$ but not $P$, and we wish to construct a vertical through the line that also passes through $S$.  Find $Q$ and $R$ on the line an equal distance from $S$ ($QS$ = $RS$), as radii of a circle centered at $S$ (left panel, below).  Their exact position is unimportant.  
-
-\begin{center} \includegraphics [scale=0.35] {perp_2.png} \end{center}
-
-Now repeat the previous construction, using $Q$ and $R$. 
-
-The line segment $ST$ is perpendicular to the line segment containing $QR$, and passes through $S$, as required.
-
-Also, see the video at the url:
-
-\url{https://www.mathopenref.com/constperpextpoint.html}
-
-\subsection*{bisector properties}
-
-Using what we've just learned, suppose we know two points $Q$ and $R$.  We find the point $P$ equidistant between them and construct the perpendicular bisector $PS$.  Then the two sides $SQ$ and $SR$ have equal length.  Triangle $\triangle SQR$ is isosceles.
+Suppose we know two points $Q$ and $R$.  We find the point $P$ equidistant between them and construct the perpendicular bisector $PS$.  Then the two sides $SQ$ and $SR$ have equal length.  Triangle $\triangle SQR$ is isosceles.
 
 \begin{center} \includegraphics [scale=0.45] {perp_3.png} \end{center}
 
@@ -79,6 +48,87 @@ By construction, $PQ = PR$, $\angle SPR$ is a right angle, and side $SP$ is shar
 $\square$
 
 This is true for \emph{any} point on the line drawn through $S$ and $P$.  For example, $TQ = TR$ in the figure above.
+
+\subsection*{construct a perpendicular bisector}
+
+Suppose we wish to construct a line segment perpendicular to another line segment.  There are three common situations (see the figure below):
+
+$\circ$ \ We want the bisector to pass through a given point $P$ on the line.
+
+$\circ$ \ We know points $Q$ and $R$ on the line and want the bisector to pass halfway between them
+
+$\circ$ \ We want the bisector to pass through a point $S$ not on the line
+
+\begin{center} \includegraphics [scale=0.4] {perp8.png} \end{center}
+
+We solve the second case and then show how the other two can be adapted to the same solution.
+
+\subsection*{bisector between two points}
+
+Simply construct two circles of equal radius, one centered at $Q$ and the other at $R$.  It's easiest to choose the radius to be equal to the length $QR$ (left panel, below).
+
+\begin{center} 
+\includegraphics [scale=0.3] {perp9.png} 
+\includegraphics [scale=0.3] {perp10.png} 
+\end{center}
+
+The point $S$ is on both circles, hence it is a radius of both, and therefore equidistant from $Q$ and $R$.  $QS = SR = QR$.  
+
+The three points form an equilateral triangle, $\triangle QRS$.
+
+The point $T$ below the line segment has the same property, and $\triangle QRS$ is congruent to $\triangle QRT$ by SSS.
+
+The line segment $ST$ is perpendicular to $QR$ and the point $P$ where $ST$ intersects $QR$ is such that $QP = PR$.
+
+Proof.
+
+$\circ$ \ $\triangle QST \cong \triangle SRT$ by SSS (two equal and one shared).
+
+$\circ$ \ Therefore the two angles at $S$, $\angle QSP$ and $\angle PSR$, are equal. 
+ 
+$\circ$ \ Therefore $\triangle QPS \cong \triangle PRS$ by SAS.
+
+$\circ$ \ $QP = PR$ by congruent $\triangle$.
+
+$\circ$ \ $\angle QPS = \angle SPR$ by congruent $\triangle$, so both are right angles.
+
+$\circ$ \ Therefore all the angles at $P$ are right angles.
+
+\subsection*{bisector through a given point on the line}
+
+Suppose we know a point $P$ on the line and wish to construct the vertical line through $P$.  
+
+Use the compass to mark off points $Q$ and $R$ on both sides of $P$, equidistant from it.  This can be done by drawing a circle with center at $P$.
+
+\begin{center} \includegraphics [scale=0.4] {perp_7.png} \end{center}
+
+Now, simply proceed as above.
+
+\subsection*{bisector through a given point not on the line}
+
+Alternatively, suppose we know the line and the point $U$ but not $P$, and we wish to construct a vertical through the line that also passes through $U$.  
+
+Find $Q$ and $R$ on the line an equal distance from $U$ ($QU$ = $RU$), as radii of a circle centered at $U$ (left panel, below).  Their exact position is unimportant.  
+
+\begin{center} \includegraphics [scale=0.35] {perp11.png} \end{center}
+
+Now repeat the previous construction, using $Q$ and $R$.  The line segment $ST$ pass through $U$, as required.
+
+Proof.
+
+(Sketch).  Since $QU = RU$, $\triangle QUR$ is isosceles.  Therefore the base angles are equal.  In an isosceles triangle, the top vertex lies on the perpendicular bisector of the base (see the first part of this chapter).
+
+\subsection*{collapsible compass}
+
+We note briefly that there is a restriction in Euclid's \emph{Elements} to a \emph{collapsible} compass, one which loses its setting when lifted from the page.  That means that generally, you wouldn't be able to draw two circles of the same radius on different centers.
+
+We get around that restriction by drawing the circles on $Q$ and $R$ with the same radius $QR$.  
+
+We will call a compass that is able to hold its setting, a \emph{standard} compass, and explain why the distinction is important to Euclid in the chapter devoted to his book.  Within the first few pages of that book, it is shown how to use a collapsible compass to carry out the very construction we said we couldn't do, namely, construct two circles on $Q$ and $R$ with equal radius and that radius not equal to $QR$ or $QP$.
+
+Also, see the video at the url:
+
+\url{https://www.mathopenref.com/constperpextpoint.html}
 
 \subsection*{three points}
 
@@ -103,5 +153,33 @@ The point where the perpendicular bisectors cross has a special name, it is call
 \begin{center} \includegraphics [scale=0.5] {three_point_circle2.png} \end{center}
 
 There are other special points where interesting circles can be drawn.  We'll talk about them in a bit.
+
+\subsection*{circumscribed circle}
+
+Here is a fun construction based on an equilateral triangle.  
+
+Any triangle fits into a unique circle (see above).
+\begin{center} \includegraphics [scale=0.4] {one_third.png} \end{center}
+
+I draw the radius to a vertex of the triangle, and extend it as the diameter, then I wonder whether the three angles marked $\theta$ are equal.
+
+Proof.  
+
+The perpendicular bisector of an isosceles (or equilateral) triangle is an altitude and it goes through the center of the circle containing all three vertices.
+
+It divides the vertex angle in half, as we've been saying.  So that accounts for two of the angles labeled $\theta$.  
+
+The third comes about because any triangle with two points at the ends of the diagonal and a third anywhere on the circle is a right triangle.  We'll prove that when we get to circles.
+
+As a result,  $\theta$ measures $30$ degrees.  Since a right triangle is $90$ degrees total, we assign the third $\theta$.
+
+\begin{center} \includegraphics [scale=0.4] {one_third.png} \end{center}
+
+So now we have one of the complementary angles of a right triangle, and a shared side.  The two triangles are congruent.  That accounts for the duplicated $a$ in the figure.
+
+Thus, the altitude of the equilateral triangle is $3/4$ of the diameter of the circle that just encloses it.  And the point where the altitudes meet in an equilateral triangle is $1/3$ of the way up from the base, since $r = 2a$.  
+
+We will see that such a point where the altitudes cross is unique and exists for any triangle, and it always has the same measure as a fraction of the altitude.  This is called Ceva's theorem.
+
 
 \end{document}

@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 
-\graphicspath{{/Users/telliott_admin/Tex/png/}}
+\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
 \title{Limits and continuity}
@@ -142,5 +142,21 @@ Without getting too technical
 \begin{quote}Note that the graph of the absolute value function is "all in one piece", but has a "sharp point" at the origin. We will not attempt to make these descriptions precise, other than to say that the fact that the graph comes "all in one piece" is a feature of continuity, and that graphs of differentiable functions are "smooth" in that they do not have "sharp points." The unambiguous and demonstrably true statement here is that the absolute value function is continuous at 0 but is not differentiable at 0.\end{quote}
 
 \url{https://oregonstate.edu/instruct/mth251/cq/Stage5/Lesson/diffVsCont.html}
+
+\subsection*{practical limits}
+
+$\bullet$ \ Plug in the value and see what happens.  No problem here:
+
+\[ \lim_{x \rightarrow 2} \ \frac{x + 1}{x^2 + 3} = \frac{3}{7} \]
+
+$\bullet$ \ Division by zero isn't allowed.  But we can factor:
+
+\[ \lim_{x \rightarrow 3} \ \frac{x^2 - 9}{x - 3} = \lim_{x \rightarrow 3} \ \frac{(x + 3)(x - 3)}{x - 3} = \lim_{x \rightarrow 3} x + 3 = 6 \]
+
+$\bullet$ \ Limit at infinity.  Convert to a limit at zero:
+
+\[ \lim_{x \rightarrow \infty} \ \frac{x^2 + 3}{3x^2 + x + 1}= \lim_{1/x \rightarrow 0} \ \frac{1 + 3/x^2}{3 + 1/x + 1/x^2}  = \frac{1}{3} \]
+
+
 
 \end{document}
