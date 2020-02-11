@@ -75,29 +75,33 @@ We will just assume that part.
 
 \subsection*{orthocenter}
 
-In the next part, we get a little ahead of ourselves.  We define the function cosine of an angle in a right triangle to be the ratio of the side adjacent to the angle, to the hypotenuse.
+Consider this triangle in which we have drawn the altitudes to each side.  We claim that they cross at a single point, called the orthocenter.
 
-So now, for this triangle
+\begin{center} \includegraphics [scale=0.4] {ceva5.png} \end{center}
+
+Let the angles be $A, B, C$ as labeled, and the sides opposite be $a, b, c$, subdivided as shown.
+
+Then $\angle A$ is part of two right triangles, and by similar triangles we have that
+\[ \frac{c_1}{b} = \frac{b_2}{c}, \ \ \ \ \ \ \frac{b_2}{c_1} = \frac{c}{b} \]
+
+Similarly for $\angle B$
+\[ \frac{a_1}{c} = \frac{c_2}{a}, \ \ \ \ \ \ \frac{c_2}{a_1} = \frac{a}{c} \]
+
+And $\angle C$
+\[ \frac{b_1}{a} = \frac{a_2}{b}, \ \ \ \ \ \ \frac{a_2}{b_1} = \frac{b}{a} \]
+
+The product of ratios that we need is
+\[ \frac{a_2}{a_1} \cdot \frac{b_2}{b_1} \cdot \frac{c_2}{c_1}  \]
+
+Rearrange the denominators:
+\[ \frac{a_2}{b_1} \cdot \frac{b_2}{c_1} \cdot \frac{c_2}{a_1}  \]
+
+But these are the same ratios as we had above:
+\[ = \frac{b}{a} \cdot \frac{c}{b} \cdot \frac{a}{c}  = 1 \]
+
 \begin{center} \includegraphics [scale=0.25] {ceva4.png} \end{center}
 
-if $\alpha$ is the angle at vertex $A$, $\beta$ at $B$ and $\gamma$ at $C$, then
-
-\[ BY = AY \ cos \alpha \]
-\[ BX = AB \ cos \beta \]
-\[ XC = AC \ cos \gamma \]
-
-and 
-\[ \frac{BX}{XC} = \frac{AB \ cos \beta}{AC \ cos \gamma} \]
-\[ \frac{CY}{YA} = \frac{BC \ cos \gamma}{AB \ cos \alpha} \]
-\[ \frac{AZ}{ZB} = \frac{AC \ cos \alpha}{BC \ cos \beta} \]
-
-When we construct this ratio, all the terms cancel.
-\[ \frac{AB cos \beta}{AC \ cos \gamma} \ 
-\frac{BC \ cos \gamma}{AB \ cos \alpha} \ 
-\frac{AC \ cos \alpha}{BC \ cos \beta} = 1 \]
-
-which means that 
-\[ \frac{BX}{XC} \ \frac{CY}{YA} \ \frac{AZ}{ZB} = 1 \]
+When we construct this product, all the terms cancel.
 
 Therefore, the 3 altitudes all cross at a single point.  That point is the orthocenter, and this is a proof that it exists.
 

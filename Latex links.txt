@@ -14,11 +14,16 @@ alternate_interior_angle_theorem
 triangle_sum_theorem
 isosceles_triangle_theorem
 complementary_angle_theorem
-
+external_angle_theorem
+pythagorean_thm
 
 (\hyperref[sec:supplementary_angle_theorem]{\textbf{ref}})
 (\hyperref[sec:vertical_angle_theorem]{\textbf{ref}})
 (\hyperref[sec:alternate_interior_angle_theorem]{\textbf{ref}})
 (\hyperref[sec:triangle_sum_theorem]{\textbf{ref}})
 (\hyperref[sec:isosceles_triangle_theorem]{\textbf{ref}})
+
 (\hyperref[sec:complementary_angle_theorem]{\textbf{ref}})
+(\hyperref[sec:external_angle_theorem]{\textbf{ref}})
+(\hyperref[sec:pythagorean_thm]{\textbf{ref}})
+(\hyperref[sec:Thales_theorem]{\textbf{ref}})

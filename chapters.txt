@@ -3,7 +3,7 @@
 Archimedes
 Introduction
 Area of a circle
-Volume of a cone
+Pyramid and cone
 Archimedes and the sphere
 
 Numbers and proof
