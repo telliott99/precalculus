@@ -11,7 +11,7 @@
 
 \graphicspath{{/Users/telliott/Github/precalculus/fig/}}
 
-\title{Basic geometry and congruence of triangles}
+\title{Congruence of triangles}
 \date{}
 
 \begin{document}
@@ -20,7 +20,8 @@
 
 \subsection*{congruence}
 
-$\bullet$  Two triangles are \emph{congruent} if and only if they have the same three side lengths.  
+\textcolor{red}{
+$\bullet$  Two triangles are \emph{congruent} if and only if they have the same three side lengths.} 
 
 Congruence is a fancy word for equal.  The condition we use is often abbreviated SSS (side-side-side). 
 
@@ -32,25 +33,25 @@ Having three sides equal means that the shape is the same.  The three angles are
 
 In addition to SSS (side-side-side), there are three other conditions that lead to congruence of two triangles when they are satisfied, namely
 
-$\bullet$  SAS (side-angle-side)
+$\circ$  SAS (side-angle-side)
 
-$\bullet$  ASA (angle-side-angle)
+$\circ$  ASA (angle-side-angle)
 
-$\bullet$  AAS (angle-angle-side)
+$\circ$  AAS (angle-angle-side)
 
 \subsection*{similarity}
 
-Some triangles are \emph{similar} but not congruent.
+\textcolor{red}{Some triangles are \emph{similar} but not congruent.}
 
-Similarity means that the three angles are the same but the triangles are of different overall sizes.  We might say that they are the same but \emph{scaled} differently.  
+Similarity means that the three angles are the same but the triangles are of different overall sizes.  
 
-We can call this AAA (angle-angle-angle).  For similar triangles, the three corresponding pairs of sides are in the same proportions, but re-scaled by a constant of proportion.
+We might say that they are the same but \emph{scaled} differently.  
 
-$\bullet$  Two triangles are similar if they have the same three angles. 
+We call this AAA (angle-angle-angle).  For similar triangles, the three corresponding pairs of sides are in the same proportions, but re-scaled by a constant of proportion.
 
-Because of the angle sum theorem, if any two angles of a pair of triangles are known to be equal, then the third one must be equal as well.
+\textcolor{red}{$\bullet$  Two triangles are similar if they have at least two angles equal.}
 
-$\bullet$  Two triangles are similar if they have two angles known to be equal. 
+Because of the triangle sum theorem (\hyperref[sec:triangle_sum_theorem]{\textbf{ref}}), if any two angles of a pair of triangles are known to be equal, then the third one must be equal as well.
 
 Similar triangles have their sides in the same proportion.  This is known as the AAA similarity theorem.
 
@@ -100,7 +101,7 @@ If we know two angles we also know the third, because they must add to 180 degre
 
 This restriction is crucial:  we must also know \emph{which} two angles flank the known side.  Alternatively, it is enough to know which angle is opposite to the known side.
  
-\subsection*{SAS, ASA, AAS but not ASS}
+\subsection*{SAS, ASA, AAS but not SSA}
 
 SAS is very commonly used to prove congruence.  
 \begin{center} \includegraphics [scale=0.4] {SAS.png} \end{center}
@@ -119,7 +120,7 @@ These methods using two angles are referred to as ASA
 
 Because AA implies AAA, these tell unambiguously which angle is opposite the known side.
 
-\subsection*{one that doesn't work}
+\subsection*{one that works only sometimes}
 
 There is one set of three that doesn't work in the general case, that is SSA (side-side-angle).
 
@@ -127,10 +128,20 @@ There is one set of three that doesn't work in the general case, that is SSA (si
 
 Here we know sides $a$ and $b$ and the angle $\theta$ adjacent to $a$ and facing opposite side $b$.  Imagine $b$ swinging on a hinge at the blue dot.  If $b < a$, there are two points where $b$ can intersect with the side projecting from angle $\theta$.  There is no unique solution, so the triangle is not determined.
 
-If it had been the case that $b > a$, or alternatively that $b$ formed a right angle with the third side, then the triangle \emph{would} be determined.
+On the other hand, if
 
-There is a temptation to call SSA:  ASS.  I think Tony Randall said it best
+$\circ$ \ $b > a$, or alternatively 
+
+$\circ$ \ $b = a$, in which case the triangle is isosceles and we have two angles plus two sides
+
+$\circ$ \ $b$ forms a right angle with the third side, in which case we also have two angles
+
+then the triangle \emph{would} be determined.
+
+There is a temptation to call this case ASS.  I think Tony Randall said it best:
 
 \url{https://www.youtube.com/watch?v=KEP1acj29-Y}
+
+
 
 \end{document}

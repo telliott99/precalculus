@@ -18,7 +18,7 @@
 \maketitle
 \Large
 
-There are several adjectives one can use to describe different types of triangles.  For example:  acute, right, and obtuse.  
+There are several different ways to describe triangles.  For example:  acute, right, and obtuse.  
 \begin{center} \includegraphics [scale=0.4] {tri_types.png} \end{center}
 
 The acute triangle (left) has all three angles smaller than a right angle.  The right triangle, naturally, has one right angle.
@@ -31,29 +31,39 @@ Finally, an obtuse triangle has one angle larger than a right angle (right, abov
 
 One can also talk about the situation where either two sides, or all three sides, have the same length.  
 
-An equilateral triangle has all three sides the same, while an isosceles triangle has two sides the same length.
+An \emph{equilateral} triangle has all three sides the same, while an \emph{isosceles} triangle has two sides the same length.
 
 The most important consequence of three sides equal for an equilateral triangle, is rotational symmetry.  Three turns of $120$ degrees, and we're back where we started.
 
 \begin{center} \includegraphics [scale=0.4] {equilateral.png} \end{center}
 
-The implication of that is that the three angles are also equal.  There is no reason to choose one larger than any other.
-
-A formal proof easily follows from the isosceles triangle theorem that we prove later in this chapter.
+The implication of rotational symmetry is that the three angles are also equal.  There is no reason to choose one larger than any other.  Therefore each angle of an equilateral triangle is $60^{\circ}$ by the triangle sum theorem (\hyperref[sec:triangle_sum_theorem]{\textbf{ref}}).
 
 In the next figure the two smaller triangles obtained by dividing in half an equilateral triangle (all sides equal), are congruent.
 
 \begin{center} \includegraphics [scale=0.6] {congruent2.png} \end{center}
 
-By divide in half, we mean bisect the base and draw the line from the top vertex.  We have SSS.
+By divide in half, we mean bisect the base and draw the line from the top vertex.
 
-We also have that the two angles at the base of the bisector are equal and supplementary angles.  Therefore, they are both right angles.
+Proof.
+
+We have SSS.
+
+Therefore, the two angles at the base of the bisector are equal and also supplementary angles.  Thus, they are both right angles.
 
 $\square$
 
+\label{sec:isosceles_triangle_theorem}
+
 \subsection*{theorem from Thales}
 
-$\bullet$  The base angles of an isosceles triangle are equal.  Also, if the two base angles are equal, the triangle is isosceles.
+\textcolor{red}{
+$\bullet$ \ The base angles of an isosceles triangle are equal.}
+
+and
+
+\textcolor{red}{
+$\bullet$  \ If the two base angles are equal, the triangle is isosceles.}
 
 \begin{center} \includegraphics [scale=0.6] {isosceles.png} \end{center}
 
@@ -73,7 +83,9 @@ We could give labels to the angles like $\alpha, \beta \dots$ and so on, to the 
 
 Boldly, we choose to be even more dramatic.  Dispense with labels altogether and use colored dots for equal angles and colored bars for equal lengths.  
 
-Here is the famous proof of Thales' theorem from Euclid's \emph{Elements}.
+Here is an adaptation of the famous proof of Thales' theorem from Euclid's \emph{Elements}.  We will refer to it later as the isosceles angle theorem.
+
+\label{sec:Euclid5}
 
 \subsection*{Euclid Prop. I.5}
 
@@ -100,6 +112,8 @@ So far, our proof runs only in the forward direction.
 In isosceles triangles the angles at the base equal one another, and, if the equal straight lines are produced further, then the angles under the base equal one another.
 
 Euclid's proof of the converse is short and introduces the method of contradiction, or \emph{reductio ad absurdum}.  That is the next proposition.
+
+\label{sec:Euclid6}
   
 \subsection*{Euclid Prop. I.6}
 
@@ -123,43 +137,29 @@ Our original assumption that $b$ does not equal $c$ must be false.
 
 $\square$
 
-A corollary is that if a triangle has all three angles equal, then it is equilateral.
-
-\subsection*{altitudes}
-
-Above we said that in this figure the two smaller triangles obtained by dividing an equilateral triangle in half, are congruent.  The dotted line is called an \emph{altitude} of the triangle.
-
-\begin{center} \includegraphics [scale=0.5] {congruent2.png} \end{center}
-
-An altitude meets the side opposite in a right triangle.
-
-Because the left and right sides of the original triangle are equal, the base angles are equal, by the property of isosceles triangles which we just proved.  The angles where the altitude meets the base are both right angles, by symmetry and by the definition of the altitude.  
-
-Therefore we have AAS, and the two halves are congruent.
-
-So, the two angles at the top where the altitude meets the sides are also equal (as the third angle with the other two angles determined).
+A corollary is that if a triangle has all three angles equal, then it is also equilateral.
 
 \subsection*{note on proofs}
 
-If you pick up a high school geometry textbook, you will see what they call \emph{two column} proofs, with the statement in one column and the reason in the second.  This is really just a matter of style.  
+If you pick up a high school geometry textbook, you will see what they call \emph{two column} proofs, with the statement in one column and the reason in the second.  I prefer \emph{paragraph} proofs, but this is really just a matter of style.  
 
-However, another thing you will see there that I don't care for is formal statements of things that are obvious, and these are required for \emph{every} proof.
+However, another thing you will see there that I don't care for is formal statements of things that are obvious, and these will be required for \emph{every} proof.
 
-Rather than say congruent triangles they will say:
+Rather than congruent triangles say:
 
 $\circ$ \ CPCTC: corresponding parts of congruent triangles are congruent.
 
-Or rather than say "side $a$ is shared" they say:
+Or rather than "side $QR$ is shared" say:
 
-$\circ$ \ Reflexive property, and write $a = a$.
+$\circ$ \ Reflexive property, and write $QR = QR$.
 
-Or rather than say $AC = 2 AB$ so $AB = AC/2$ they wiqll say:
+Or rather than $AC = 2 AB$ so $AB = AC/2$ say:
 
 $\circ$ \ division property of the equals sign"
 
-or some such.  If you have to say something, say "basic arithmetic."
+or some such.  If you must write something, say "basic arithmetic."
 
-This is completely unnecessary, unless of course you are taking such a course.
+This seems completely unnecessary, unless you are taking such a course, and then it's essential.
 
 
 

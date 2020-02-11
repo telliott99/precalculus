@@ -21,17 +21,31 @@
 
 \subsection*{altitude of an isosceles triangle}
 
-Consider this triangle.
+Consider this triangle with two equal sides --- isosceles.
 \begin{center} \includegraphics [scale=0.35] {isosceles3.png} \end{center}
-If we are given $QS = SR$, by the theorem on isosceles triangles, we know that the base angles are equal.  
+If we are given $QS = SR$, by the theorem on isosceles triangles, we know that the base angles  $\angle PQS$ and $\angle PRS$ are equal (Euclid \hyperref[sec:Euclid5]{\textbf{Prop $I.5$}}).
 
-Alternatively, we will show soon that if the base angles are equal, then so are the sides.
+Alternatively, if the base angles are equal, then so are the sides (Euclid \hyperref[sec:Euclid6]{\textbf{Prop $I.6$}}).
 
-Given that this is an isosceles triangle, suppose we are also given that $\angle SPR$ is a right angle.  Then we have two equal angles, three angles equal by the triangle sum theorem, plus a shared side.  
+If $\angle SPR$ is a right angle, then the $SP$ bisects the base as well as the vertex $\angle QSR$.
 
-Therefore $\triangle QPS \cong \triangle PRS$, so the segments on the base are equal.  $QP = PR$.
+Proof.
 
-Alternatively, suppose we are given that $QP = PR$.  Then $\triangle QPS \cong \triangle PRS$ by SSS.  Therefore $\angle QPS = \angle SPR$ and both are right angles by the supplementary angles theorem.
+We have two equal angles in the smaller triangles, plus a shared side (AAS).  
+
+Therefore $\triangle QPS \cong \triangle PRS$, so the segments on the base are equal.  
+
+$QP = PR$.
+
+$\square$
+
+If the base is bisected, above, then the line segment $SP$ is an \emph{altitude} of the triangle, and it meets the base in a right angle.
+
+Proof.
+
+We are given that $QP = PR$.  Then $\triangle QPS \cong \triangle PRS$ by SSS. 
+
+Therefore $\angle QPS = \angle SPR$ and both are right angles by the supplementary angles theorem (\hyperref[sec:supplementary_angle_theorem]{\textbf{ref}}).
 
 $\square$
 
@@ -41,27 +55,23 @@ Suppose we know two points $Q$ and $R$.  We find the point $P$ equidistant betwe
 
 \begin{center} \includegraphics [scale=0.45] {perp_3.png} \end{center}
 
-Proof.
-
-By construction, $PQ = PR$, $\angle SPR$ is a right angle, and side $SP$ is shared.  Hence the two triangles $\triangle SPQ$ and $\triangle SPR$ are congruent, by SAS.
-
-$\square$
+Proof.  By the theorem from above.
 
 This is true for \emph{any} point on the line drawn through $S$ and $P$.  For example, $TQ = TR$ in the figure above.
 
-\subsection*{construct a perpendicular bisector}
+\subsection*{to construct a perpendicular bisector}
 
 Suppose we wish to construct a line segment perpendicular to another line segment.  There are three common situations (see the figure below):
 
-$\circ$ \ We want the bisector to pass through a given point $P$ on the line.
+- We want the bisector to pass through a given point $P$ on the line.
 
-$\circ$ \ We know points $Q$ and $R$ on the line and want the bisector to pass halfway between them
+- We know points $Q$ and $R$ on the line and want the bisector to pass halfway between them
 
-$\circ$ \ We want the bisector to pass through a point $S$ not on the line
+- We want the bisector to pass through a point $S$ not on the line
 
 \begin{center} \includegraphics [scale=0.4] {perp8.png} \end{center}
 
-We solve the second case and then show how the other two can be adapted to the same solution.
+We solve the second case and then show how the other two can be adapted to it.
 
 \subsection*{bisector between two points}
 
@@ -74,7 +84,7 @@ Simply construct two circles of equal radius, one centered at $Q$ and the other 
 
 The point $S$ is on both circles, hence it is a radius of both, and therefore equidistant from $Q$ and $R$.  $QS = SR = QR$.  
 
-The three points form an equilateral triangle, $\triangle QRS$.
+The three points form an equilateral triangle, $\triangle QRS$ (Euclid \hyperref[sec:Euclid1]{\textbf{Prop $I.1$}}).
 
 The point $T$ below the line segment has the same property, and $\triangle QRS$ is congruent to $\triangle QRT$ by SSS.
 
@@ -93,6 +103,8 @@ $\circ$ \ $QP = PR$ by congruent $\triangle$.
 $\circ$ \ $\angle QPS = \angle SPR$ by congruent $\triangle$, so both are right angles.
 
 $\circ$ \ Therefore all the angles at $P$ are right angles.
+
+$\square$
 
 \subsection*{bisector through a given point on the line}
 
@@ -138,9 +150,9 @@ Now, suppose we have three points:  $Q$, $R$ and $S$.  We find the perpendicular
 
 What can we say about point $O$?
 
-$\bullet$ \ $O$ is equidistant from $Q$ and $R$.
+$\circ$ \ $O$ is equidistant from $Q$ and $R$.
 
-$\bullet$ \ $O$ is also equidistant from $Q$ and $S$.
+$\circ$ \ $O$ is also equidistant from $Q$ and $S$.
 
 Therefore, $OQ = OR = OS$.  If we draw a circle on center $O$ with radius $OR$, it will pass through all three points.
 
@@ -152,7 +164,7 @@ The point where the perpendicular bisectors cross has a special name, it is call
 
 \begin{center} \includegraphics [scale=0.5] {three_point_circle2.png} \end{center}
 
-There are other special points where interesting circles can be drawn.  We'll talk about them in a bit.
+There are other special points where interesting circles can be drawn.
 
 \subsection*{circumscribed circle}
 
@@ -161,7 +173,7 @@ Here is a fun construction based on an equilateral triangle.
 Any triangle fits into a unique circle (see above).
 \begin{center} \includegraphics [scale=0.4] {one_third.png} \end{center}
 
-I draw the radius to a vertex of the triangle, and extend it as the diameter, then I wonder whether the three angles marked $\theta$ are equal.
+Draw the radius to a vertex of the triangle, and extend it as the diameter.  We will show that the three angles marked $\theta$ are equal.
 
 Proof.  
 

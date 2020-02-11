@@ -33,17 +33,16 @@ Since the sum of angles in a triangle is equal to two right angles, the sum of t
 
 Angles $\theta$ and $\phi$ are said to be \emph{complementary}.  This fact is often exploited in proofs.
 
-$\bullet$ \ the two smaller angles in a right triangle are complementary and add to 90 degrees.
+\textcolor{red}{
+$\bullet$ \ the two smaller angles in a right triangle add to 90 degrees.}
 
-\subsection*{right triangles}
+\subsection*{hypotenuse-leg (HL)}
  
 For two right-triangles, if one hypotenuse is equal to the other, and also one set of legs equal, the two triangles are congruent.
 
 \begin{center} \includegraphics [scale=0.4] {hyp_side_cong.png} \end{center}
 
-In the figure, imagine the hypotenuse swinging on the hinge of its vertex with the horizontal base.  There is only one angle where it will terminate on the vertical side with the correct length.  This determines the angle between the known sides, or alternatively, the length of the third side.
-
-This is sometimes called HL for \emph{hypotenuse-leg}.  
+In the figure, imagine the hypotenuse swinging on the hinge of its vertex with the horizontal base.  There is only one angle where it will terminate on the vertical side with the correct length.  This determines the angle between the known sides, or alternatively, the length of the third side. 
 
 We really have SSA (which we said doesn't work always).  However, it does work for right triangles.   
 
@@ -51,7 +50,15 @@ Previously we showed this figure:
 
 \begin{center} \includegraphics [scale=0.4] {angle_side_side.png} \end{center}
 
-and we said that in the special case where $b$ meets the opposing side in a right angle, that SSA is enough to prove congruence.  Call if HL to be safe, but it does work.
+and we said that in the special case where $b$ meets the opposing side in a right angle, that SSA is enough to prove congruence.  Call it HL to be safe, but it does work.
+
+Other named methods of proof for right triangles can be found in books, but these do not add anything because they are exactly equivalent to methods we already know:
+
+$\circ$ Leg-Leg, the two legs flank the right angle (SAS).
+
+$\circ$ Hypotenuse-Acute angle (AAS).
+
+$\circ$ Leg-Acute angle (ASA).
 
 \subsection*{altitudes}
 
@@ -66,6 +73,53 @@ Hence
 \[ s + t = s + t' \]
 \[ t = t' \]
 and similarly for $s$ and $s'$.
+
+\subsection*{angle bisectors}
+
+We want to prove a theorem about angle bisectors, as well as its converse.  Before we do that, we need three theorems about right triangles.
+
+$\bullet$ \ In any right triangle, the right angle is larger than either of the other two angles.
+
+Proof.
+
+Suppose $\alpha$ and $\beta$ are complementary angles in a right triangle,  Then $\alpha + \beta$ is equal to one right angle.  But the measure of both angles is non-zero.  Therefore $\alpha < 90$ and the same for $\beta$.
+
+$\square$
+
+$\bullet$ \ In any right triangle, the hypotenuse is longer than either side.
+
+Proof.
+
+By the previous theorem, the right angle is the largest angle in a right triangle.
+
+By (Euclid \hyperref[sec:Euclid1]{\textbf{Prop $I.18$}} in the next chapter):  in any triangle, a greater side is opposite a greater angle.  
+
+$\square$
+
+$\bullet$ \ The distance from a point to a line is least at the point where the new line segment makes a right angle with the line.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector2.png} \end{center}
+
+Proof.
+
+Consider $QR$.  Any other line segment forms a right triangle with $QR$, where that line segment is the hypotenuse.  By the previous theorem, $QR$ must be shorter.
+
+So then:
+
+$\bullet$ \ Any point on the bisector of an angle is equidistant from the sides at the point of closest approach.
+
+\begin{center} \includegraphics [scale=0.4] {angle_bisector2.png} \end{center}
+
+We simply draw the vertical line $RS$.  The resulting triangle is congruent to $\triangle PQR$ by AAS.  Therefore, $QR = RS$.
+
+$\square$
+
+$\bullet$ \ If a point is equidistant from the sides of an angle, then it lies on the angle bisector.
+
+Proof.
+
+Use SAS to prove the same congruence as in the previous theorem.  Then, $\angle \theta = \angle \phi$.
+
 
 \subsection*{stacked triangles}
 
@@ -82,7 +136,7 @@ Further, $\triangle QRT$ and $\triangle OPQ$ are similar triangles.
 
 \label{sec:angle_bisector}
 
-With that background, we now consider a classic problem:  angle bisectors.
+With that background, we now consider a classic problem:  the ratio of sides when there is an angle bisector.
 \begin{center} \includegraphics [scale=0.4] {angle_bisector_r1.png} \end{center}
 Suppose we are given that the large triangle is a right triangle.  
 
@@ -97,7 +151,7 @@ Suppose we choose the second possibility, equal angles.  We are in a position to
 With reference to the two figures above, we are to prove that
 \[ \frac{d}{b} = \frac{c}{a} \]
 
-The sides and bases are in proportion for a right triangle with bisected angle.
+$\bullet$ \ The sides and bases are in proportion for a right triangle with bisected angle.
 
 Proof.
 
@@ -117,13 +171,14 @@ This is rearranged simply to give
 \[ \frac{d}{b} = \frac{c}{a} \]
 which is what we were asked to prove.
 
-$\square$
-
 The result can be pushed a little further:
 \[ \frac{a}{b} = \frac{c}{d} \]
 Here's the key point
 \[ \frac{a + b}{b} = \frac{c + d}{d} \]
 \[ \frac{a + b}{c + d} = \frac{b}{d} = \frac{a}{c} \]
+
+$\square$
+
 \begin{center} \includegraphics [scale=0.4] {angle_bisector_r5.png} \end{center}
 
 which is a surprising result and becomes important later in looking at Archimedes method for approximating the value of $\pi$.

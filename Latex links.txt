@@ -1,0 +1,24 @@
+\label{sec:xyz}
+
+\hyperref[sec:xyz]{\textbf{here}}
+
+
+\label{sec:Euclid1}
+
+(Euclid \hyperref[sec:Euclid1]{\textbf{Prop $I.1$}})
+
+
+supplementary_angle_theorem
+vertical_angle_theorem
+alternate_interior_angle_theorem
+triangle_sum_theorem
+isosceles_triangle_theorem
+complementary_angle_theorem
+
+
+(\hyperref[sec:supplementary_angle_theorem]{\textbf{ref}})
+(\hyperref[sec:vertical_angle_theorem]{\textbf{ref}})
+(\hyperref[sec:alternate_interior_angle_theorem]{\textbf{ref}})
+(\hyperref[sec:triangle_sum_theorem]{\textbf{ref}})
+(\hyperref[sec:isosceles_triangle_theorem]{\textbf{ref}})
+(\hyperref[sec:complementary_angle_theorem]{\textbf{ref}})

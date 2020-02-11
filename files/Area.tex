@@ -31,19 +31,41 @@ This particular figure (from Lockhart) shows the distributive law in action:
 \[ = 48 \]
 Any combination of numbers that add up to $8$, times any combination of numbers that add up to $6$, gives the same result.
 
-The next figure is a parallelogram, a four-sided figure whose two pairs opposite sides are parallel (left panel).  As a consequence of the theorems we saw previously, the opposing angles are equal, and the adjacent angles add up to 180 degrees.
-\begin{center} \includegraphics [scale=0.4] {area7.png} \end{center}
+The next figure is a parallelogram, a four-sided figure whose two pairs of opposite sides are parallel.
 
-To find the area, we cut off a right triangle from the left and re-attach it on the right.  The angles add up to form a straight line along the base and a right triangle at the upper right.    The area is clearly $h \times b$.
+\begin{center} \includegraphics [scale=0.4] {pgram5.png} \end{center}
+
+The opposing angles are equal, and the adjacent angles add up to 180 degrees.
+
+Proof.
+
+Extend the parallel sides and apply the theorem on alternate interior angles (\hyperref[sec:alternate_interior_angle_theorem]{\textbf{ref}}).
+
+The second conclusion is a consequence of supplementary angles (\hyperref[sec:supplementary_angle_theorem]{\textbf{ref}}).
+
+Further, if we draw the diagonal, we have ASA so $\triangle ACD \cong \triangle ABC$, and it follows that $AB = DC$ and $AD = BC$
+
+$\square$
+
+To find the area of a parallelogram, we cut off a right triangle from the left and attach it on the right.  The angles add up to form a straight line along the base and a right triangle at the upper right.    The area is clearly $h \times b$.
+
+\begin{center} \includegraphics [scale=0.4] {area7.png} \end{center}
 
 What about triangles?  Previously, we talked about an approach where any triangle can be divided into two right triangles.
 
 Alternatively, any triangle can be turned into a parallelogram, by attaching a rotated image of itself, like this:
 \begin{center} \includegraphics [scale=0.4] {area4.png} \end{center}
 
-It is easy to show that $\triangle ABC \cong \triangle ABC'$ and $\triangle DEF \cong \triangle DE'F$.  For example, by construction $AC$ is parallel to $BC'$ so $\angle ACB = \angle AC'B$.  We'll leave it to you to complete the proof.
+What we mean is that, by construction, $\triangle ABC \cong \triangle ABC'$ and $\triangle DEF \cong \triangle DE'F$.
 
-An acute triangle is on the left and an obtuse triangle on the right.  Since the area of each triangle is one-half that of its corresponding parallelogram (because we added the same area to make the parallelogram), the area of a triangle is one-half the base times the height.
+So then $ACBC'$ is a parallelogram by the alternate interior angles theorem.
+
+$\square$
+
+An acute triangle is on the left and an obtuse triangle on the right.  Since the area of each triangle is one-half that of its corresponding parallelogram (because we added the same area to make the parallelogram)
+
+\textcolor{red}{
+$\bullet$ \ the area of a triangle is one-half the base times the height.}
 
 \begin{center} \includegraphics [scale=0.4] {area3.png} \end{center}
 
@@ -51,9 +73,9 @@ In the figure above, the area is
 
 \[ A = \frac{1}{2} \ af = \frac{1}{2} \ bg = \frac{1}{2} \ ch \]
 
-We can choose any side of the triangle to be the base and then multiply $1/2 \cdot$ base $\cdot$ height to get the area.  We must always get the same answer!
+We can choose any side of the triangle to be the base and then multiply $1/2 \cdot$ base $\cdot$ height to get the area.  
 
-If you accept the argument about the parallelogram above, it must be true, because the area of the triangle has to be the same no matter how you calculate it.  
+We must always get the same answer!  The area of the triangle has to be the same no matter how you calculate it.  
 
 Here's a proof by counting up the area of smaller triangles:
 
@@ -74,7 +96,10 @@ Similar calculations can be carried out for the other two sides.  Hence the area
 
 $\square$
 
-A corollary is that all triangles with the same base and height have the same area.
+A corollary is that 
+
+\textcolor{red}{$\bullet$ \ all triangles with the same base and height have the same area.}
+
 
 Draw two parallel lines.  Mark off equal distances between adjacent points $A$ through $J$ on the bottom.  Now pick any point on the top and draw the triangle with two \emph{equidistant} points on the bottom.  Any other triangle drawn with an equal base has the same area.
 

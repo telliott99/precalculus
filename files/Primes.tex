@@ -150,9 +150,21 @@ Even for a relatively small number of primes, we may encounter the second situat
 $1807$ is \emph{not} prime.  ($1807 = 13 \cdot 139$).
 
 \subsection*{testing primality}
-This is a pretty deep subject.  However, a simple filter to apply first is to ask:  is the last digit one of $\{ 0,2,4,6,8 \}$, i.e. is the number even?  Does the number end in $5$?  Or is the sum of the digits divisible by $3$ or $9$?
+This is a pretty deep subject.  However, a simple filter to apply first is to ask:  
 
-There is a trick for the last test.  If a number is divisible by $3$ its digits add to a multiple of three.  Suppose the number is:
+$\circ$ \ Is the last digit one of $\{ 0,2,4,6,8 \}$, i.e. is the number even?  
+
+$\circ$ \ Does the number end in $5$?  
+
+$\circ$ \ Or is the number divisible by $3$?
+
+There is a trick for the last test.  If a number is divisible by $3$ its digits add to a multiple of three.
+
+Example:
+
+$91$ is not divisible by $3$ but $912$ is.  When processing digits, we can just subtract and forget any multiples of $3$ along the way.  With $91$, recognize that $9$ is divisible by $3$, so just forget it and move on.  That leaves $1$, which is not divisible by $3$, or $1 + 2$, which is.
+
+Suppose the number is:
 \[ abcd = a \cdot 10^3 + b \cdot 10^2 + c \cdot 10^1 + d \]
 \[ = a (9 \cdot 10^2 + 1) + b (9 \cdot 10^1 + 1) + c (9 \cdot 10 + 1) + d \]
 If $x|(y+z)$ and $x|y$ then it must be that $x|z$.  Since $9$ times anything is divisible by $3$, it follows that $3$ must divide $a + b + c + d$ for $abcd$ to be divisible by $3$.
