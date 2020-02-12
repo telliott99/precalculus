@@ -24,7 +24,7 @@ As you know, the positive integers larger than $1$ are of two types:
 
 $\bullet$ \ a prime number $p$ has only two factors, $p$ itself and $1$
 
-$\bullet$ \ a composite number has at least one additional factor.  Either the number is a perfect square of a prime, or it has an even number of additional factors: $a_1 \dots a_k$.
+$\bullet$ \ a composite number has at least one additional factor.  Either the number is a perfect square of a prime, or it has additional factors: $n = p_1, p_2 \dots p_k$.
 
 The first ten primes are:
 \begin{verbatim}
@@ -48,11 +48,11 @@ Next, do the same thing with $3$ (green).  $6$ was already eliminated previously
 
 The next larger number that still has a white square is $5$.  All the squares eliminated at this step are white ones in the fifth row, starting with $25$.  Continue with $7$, eliminating $49, 77, 91$ and $119$.
 
-The sieve now ends (for this upper bound of $120$).  
+Notice that the smallest number to be eliminated with $7$ is $7^2 = 49$, similarly with $5$ the first was $25$.  The first number to be eliminated with $q$ is $q^2$.  This is always true.
 
-The rule is that if the number for the next round, the smallest number not yet eliminated, is larger than the square root of the upper limit ($\sqrt{120}$), we terminate.  
+The sieve now ends (for this upper bound of $120$).
 
-So $7$ is the last value used, because after that round the smallest remaining integer is $11$, but we terminate since $11^2 = 121 > 120$.
+The rule is that at the beginning of a round, test the next candidate prime $q$ by squaring and comparing with the upper limit $L$.  If $q^2 > L$,  we terminate.  So after that round using $7$ , the smallest remaining integer is $11$, but we terminate since $11^2 = 121 > 120$.
 
 The graphic shows all the numbers which have yet to be eliminated after the round of $7$.   All of these numbers, $11$, $13$, $17$, and so on, as well as those used as divisors for each round of the sieve ($2, 3, 5, 7$), are prime numbers.
 
@@ -70,15 +70,17 @@ A bigger challenge is to come up with a method to \emph{grow} the list of primes
 
 \subsection*{recognizing primes quickly}
 
+We did a bit of this in the previous chapter, we'll leave this here as review.
+
 There are school problems that require you to factor numbers at least up to $100$, maybe more, quickly.  It can be helpful to learn to recognize the primes in this range.
 
 $\circ$ \ First, primes end in one of the digits: $1,3,7,9$.
 
 $\circ$ \ Test quickly for $3$ as a factor by the digit sum trick.
 
-$\circ$ \ Test $7$ as a factor by trial multiplication.
+$\circ$ \ Test $7$ as a factor by trial multiplication or the $7$ trick we talked about before.
 
-Let's do the first row, for an example:
+For trial multiplication, let's do the first row, for an example:
 \begin{verbatim}
 11 21 31 41 51 61 71 81 91 101 111
 \end{verbatim}
@@ -91,21 +93,24 @@ You should recognize $11$ as prime, immediately.  Then remove the numbers whose 
 
 Then, trial multiplication by $7$ to get a number ending in $1$.  
 
-The $1$ reminds me of $21$, so I guess:  $7 \cdot (10 + 3) = 70 + 21 = 91$.  Gone.
+The way I do this is by computing the difference with a number that is divisible by $7$.  If the difference is not divisible by $7$, then neither is the candidate number.
 
-$\circ$ \ $91 - 71 = 20$
+For example, since we're in the ones column, I'm thinking $7 \cdot 3 = 21$ and so $7 \cdot (10 + 3) = 70 + 21 = 91$, so we can eliminate $91$ as a possible prime.
 
-$\circ$ \ $91 - 61 = 30$
+Furthermore, by comparison with $91$:
 
-$\circ$ \ $101 - 91 = 30$
+\begin{verbatim}
+ 91 - 71 = 20
+ 91 - 61 = 30
+ 91 - 41 = 50
+101 - 91 = 30
+\end{verbatim}
 
-$\circ$ \ $91 - 41 = 50$
-
-None of these differences is divisible by $7$, so the numbers are not, either.
+None of these differences is divisible by $7$, so the numbers themselves are not, either.
 
 I trust you recognize that $31$ is $3$ more than $7 \cdot 4$.
 
-We do not need to test any primes larger than $11$.  All multiples of $11$ are double digits, until $110$.  
+We do not need to test any primes larger than $11$.  All multiples of $11$ are repeated double digits ($22, 33 \dots$), until $110$.  
 
 That leaves:
 
@@ -156,20 +161,12 @@ $\circ$ \ Is the last digit one of $\{ 0,2,4,6,8 \}$, i.e. is the number even?
 
 $\circ$ \ Does the number end in $5$?  
 
-$\circ$ \ Or is the number divisible by $3$?
+$\circ$ \ Or is the number divisible by $3$ or $9$?
 
-There is a trick for the last test.  If a number is divisible by $3$ its digits add to a multiple of three.
+$\circ$ \ Is the number divisible by $7$.
 
-Example:
+We looked at these tricks in a previous chapter ().
 
-$91$ is not divisible by $3$ but $912$ is.  When processing digits, we can just subtract and forget any multiples of $3$ along the way.  With $91$, recognize that $9$ is divisible by $3$, so just forget it and move on.  That leaves $1$, which is not divisible by $3$, or $1 + 2$, which is.
-
-Suppose the number is:
-\[ abcd = a \cdot 10^3 + b \cdot 10^2 + c \cdot 10^1 + d \]
-\[ = a (9 \cdot 10^2 + 1) + b (9 \cdot 10^1 + 1) + c (9 \cdot 10 + 1) + d \]
-If $x|(y+z)$ and $x|y$ then it must be that $x|z$.  Since $9$ times anything is divisible by $3$, it follows that $3$ must divide $a + b + c + d$ for $abcd$ to be divisible by $3$.
-
-A similar thing is true of $9$ except that the digits must add only to $9$.
 
 A more general observation is that all primes greater than $3$ are of the form $4k + 1$ or $4k + 3$, for integer $k$.  That's because $4k$ and $4k + 2$ are even, and $4k + 4 = 4(k + 1)$.
 

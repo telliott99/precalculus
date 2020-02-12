@@ -1,0 +1,204 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Arithmetic}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+\subsection*{divisibility}
+
+In this chapter we're working with integers or just natural numbers.
+
+Doing division, computing $n/d$, means we want to find $q$ such that:
+\[ n = q \cdot d + r \]
+
+An important special case is when $r = 0$.  We are concerned to know whether the division is \emph{even} or not:
+\[ n = q \cdot d, \ \ \ \ \ \ \frac{n}{d} = q \]
+
+If $r = 0$, then the result of dividing $n/d$ is an integer.
+
+There is a special symbol for that:  if $d$ divides $n$ evenly, we write $d|n$.  But don't mix up the new symbol $|$ with the division symbol seen in the line before (i.e. $n/d$).
+
+Now suppose we have another number $m$ that is also divisible by $d$
+\[ m = p \cdot d \]
+
+Then 
+\[ m + n = (p + q) \cdot d \]
+\[ m - n = (p - q) \cdot d \]
+
+\textcolor{red}{$\bullet$ \ If $d|m$ and $d|n$, $d$ also divides their sum and difference.} 
+
+In general if
+\[ a + b = c \]
+and $d$ divides any two of them, it divides the third.
+
+In the proof above, we used the principle that additional factors don't matter.
+
+\textcolor{red}{$\bullet$ \ If $d|n$ then $d|an$, where $a$ is any whole number.} 
+
+In particular, powers of $10$ don't matter.  If $d|n$, then $d$ divides any multiple of $n$, such as $100 \cdot n$.
+
+\subsection*{trick for $3$ and $9$}
+
+It is very helpful to decide quickly whether a number $n$ is divisible by a given small prime number like $2, 3, 5, 7, 11$.
+
+Clearly, if $n$ is even, its last digit is one of $02468$.
+
+And $n$ is divisible by $5$ if its last digit is one of $05$.
+
+The first trick is that $n$ is divisible by $3$ if its digits add to a multiple of $3$.
+
+Example:
+
+$91$ is not divisible by $3$, but $912$ is.  
+
+When processing digits, we can just subtract and forget any multiples of $3$ along the way.  With $91$, recognize that $9$ is divisible by $3$, so just forget it and move on.  
+
+That leaves $1$, which is not divisible by $3$, or $1 + 2$, which is.
+
+Proof.
+
+Suppose the number is:
+
+\[ abcd = a \cdot 10^3 + b \cdot 10^2 + c \cdot 10^1 + d \]
+\[ = a (999 + 1) + b (99 + 1) + c (9 + 1) + d \]
+
+As we proved above, if $x|(y+z)$ and $x|y$ then it must be that $x|z$.  Since $9$ times anything is divisible by $3$, it follows that $3$ must divide $a + b + c + d$ for $abcd$ to be divisible by $3$.
+
+$\square$
+
+A similar thing is true of $9$ except that the digits must add only to $9$.  The proof is the same.
+
+How about $123456789$.  Add the digits:
+\[ 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 9 + 9 + 9 + 9 + 9 \]
+Do you see the trick there?
+
+So $123456789$ is evenly divisible by both $3$ and by $9$.
+
+\subsection*{trick for $7$}
+
+There is also a trick for $7$.  Take the last digit of $n$ away from the number.  Then double it and subtract.  Repeat if necessary.  If you reach a multiple of $7$, then $7$ also divides the larger number.
+
+Example.
+
+Let $n = 3101$.  The last digit is $1$, double it and subtract:
+\[ 310 - 1 = 308 \]
+Repeat
+\[ 30 - 16 = 14 \]
+So yes, $3101$ is divisible by $7$.  We can check pretty easily now that we know it's worth it.
+\[ 7 \cdot 400 = 2800 \]
+Subtracting, I get $301$.
+\[ 7 \cdot 40 = 280 \]
+Subtracting, I get $21 = 7 \cdot 3$.  
+
+So $7|3101$ and $3101/7 = 400 + 44 + 3 = 443$.
+
+Proof.
+
+Write
+\[ m = n - 21b \]
+This is the subtraction step.  We subtract one of $b$ from the last place and twice $b$ from the next to last place.  
+
+We use our three rules from the beginning.  First, the $0$ in the last place goes away, because of what we said about factors of $10$ above.  Ignore the $0$.
+
+Then, we know that $7|(21 \cdot b)$ because $7|21$.  
+
+So now we know that $7|n$ if and only if $7|m$.
+
+$\square$
+
+\subsection*{distributive law}
+
+This is the \emph{distributive property} of multiplication over addition.  For any numbers $a,b,c$:
+
+\[ a \cdot (b+c) = a \cdot b + a \cdot c \]
+
+We used this principle above in trying compute $3101/7$ in our head.  Write:
+\[ 3101 = 7 \cdot (400 + \dots) \]
+
+That's the first move.  Then what's left is $3101 - 2800$.  So we need to find $301/7$.  And so on.
+
+I can use this principle to check numbers less than $100$ that end in $3$ for whether they are prime.  To begin with, we have:
+
+\begin{verbatim}
+13 23 33 43 53 63 73 83 93
+\end{verbatim}
+
+We use the $3$'s trick to remove multiples of $3$:
+
+\begin{verbatim}
+13 23 43 53 73 83
+\end{verbatim}
+
+Since $7 \cdot 10 = 70$, we know that none of $53, 73, 83$ is divisible by $7$.  I use the times table for the rest:  $3 \cdot 7 = 21$ and $6 \cdot 7 = 42$.  So none of the numbers in our list is divisible by $7$. 
+
+Therefore, they are all prime, as we will see soon.  The smallest number that is divisible by $p$ but not by primes smaller than $p$ is $p^2$.  So we do not need to check for divisibility by $11$.
+
+\subsection*{times table}
+
+I know it's boring, but it is extremely helpful to be proficient with multiplication of small numbers:
+
+\begin{verbatim}
+    2  3  4  5  6  7  8   9  10  11  12
+ 2  4
+ 3  6  9
+ 4  8 12 16
+ 5 10 15 20 25
+ 6 12 18 24 30 36
+ 7 14 21 28 35 42 49
+ 8 16 24 32 40 48 56 64
+ 9 18 27 36 45 54 63 72  81
+10 20 30 40 50 60 70 80  90 100
+11 22 33 44 55 66 77 88  99 110 121
+12 24 36 48 60 72 84 96 108 120 132 144
+\end{verbatim}
+
+And it wouldn't hurt to go up as far as $20$.  The $9$'s trick can be helpful for that row.
+
+There are all kinds of tricks.  Here is one for multiplying $n$ by $11$.  
+
+- write the first digit of $n$
+
+- add the first two digits of $n$ and write them
+
+- continue with each pair of digits to the end
+
+- write the last digit of $n$
+
+The thing that makes it hard is you must "carry" the ones.  Consider $n=123456789$
+
+\begin{verbatim}
+ 123456789
+1234567890
+-----------
+1357913579
+\end{verbatim}
+
+That's \emph{almost} right.
+
+But we need another $1$ in the columns with $9+8, 8+7, 7+6, 6+5$, and that extra $1$ will have to get carried again to the column with $4+3$.  Compare
+
+\begin{verbatim}
+1357913579
+    1111
+1358024679
+\end{verbatim}
+
+A bit too easy to make a mistake for my taste.
+
+
+\end{document}

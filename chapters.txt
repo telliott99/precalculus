@@ -8,6 +8,7 @@ Archimedes and the sphere
 
 Numbers and proof
 Integers
+Arithmetic
 Primes
 Prime factorization
 Induction
@@ -39,7 +40,6 @@ Similar triangles
 Special points
 Orthocenter
 Hippocrates
-Heron's formula
 
 The real numbers
 Rational numbers
@@ -67,6 +67,7 @@ Six functions
 Sum of angles
 Law of cosines
 Value of pi
+Heron and Brahmagupta
 
 Two basic operations in calculus
 Simple slopes

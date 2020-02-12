@@ -19,9 +19,9 @@
 \maketitle
 \Large
 
-We need a formula for the volume of a cone in order to find the volume of the sphere.  In order to find the cone's volume, we start with something simpler, a pyramid with a square base.  
+We need a formula for the volume of a cone in order to find the volume of the sphere.  To find the cone's volume, let's start with something simpler, a pyramid with a square base.  
 
-Consider a cube with all eight edges having length $s$.  So each of the six faces is a square with sides of length $s$ and area $s^2$.
+Below is a cube with all eight edges having length $s$.  Each of the six faces is a square with sides of length $s$ and area $s^2$.
 
 Label the central point inside the solid as $P$.  Draw lines connecting each of the 8 external vertices to $P$, something like this. 
 \begin{center}\includegraphics [scale=0.5] {cube_to_cone.png}\end{center}
@@ -34,103 +34,138 @@ Perhaps you could do it with a \emph{light saber} since the beam comes to a poin
 
 \begin{center}\includegraphics [scale=0.4] {light_saber.png}\end{center}
 
-The result would be 6 identical pieces (square pyramids) looking something like this
-\begin{center}\includegraphics [scale=0.2] {sq_pyramid.png}\end{center}
+The result is 6 identical pieces (right square pyramids) looking something like this
+\begin{center}\includegraphics [scale=0.25] {sq_pyramid.png}\end{center}
 
-The procedure described generates pyramids with height $s/2$.  So they are a little squat, but just bear with me.
+The procedure described generates pyramids with height $s/2$ on a base of side length $s$.  I admit they are a little squat, but just hang on.
 
-We started with a cube so that the six resulting solids would be identical.  
+Since we started with a cube, and work from a central point, the six resulting solids are identical.  
 
-Unfortunately you can either have six pieces come out exactly the same, as we've done, or make it so some of the pieces come out with equal base and height, but you can't do both at the same time by this construction.
+You can either have six pieces come out exactly the same, as we've done, or start with an elongated base, so then two of the pieces will come out with equal base and height, but you can't do both at the same time by this construction.
 
-Let the six identical pyramid volumes each be $V$, and their sum is equal to the volume that we started with.  We have that
+Let the six identical pyramid volumes each be $V$.  Their sum is equal to the volume of the cube that we started with.
+
 \[ 6V = s^3 \]
 \[ V = \frac{1}{6} s^3  \]
 
-If we factor out the height $h = s/2$ we obtain
+The height $h = s/2$ so
 \[ V = \frac{1}{3} \ hs^2 \]
 
-This is the volume for each pyramid with base area $s^2$ and height $s/2$.  
+This is the volume for each pyramid with base area $s^2$ and height $h = s/2$.  
 
-The volume depends on both the area of the base and the height.  You can show this by starting with solids that are longer in one-dimension.  Since here $h = s/2$ it all works out.
+By changing the area of the base or the height, you can alter the shapes obtained.  But all other constructions give at least two different types of pyramids, which means we can't simply divide by $6$ as we did.  This is, unfortunately, a fatal defect.
 
 \subsection*{better way}
 
-Here is an even better way to slice a cube
+Here is a better way to slice a cube.
 
 \begin{center}\includegraphics [scale=0.5] {pyramid_cube.png}\end{center}
 
-When I first saw this, I thought it was a trick.  But in fact, we have produced $3$ identical pyramids (they are called oblique because the apex is not in the center).
+When I first saw this, I thought it was a trick.  We have produced $3$ identical pyramids (they are called oblique because the apex is not in the center).
 
 \url{http://www.math.brown.edu/~banchoff/Beyond3d/chapter2/section02.html}
 
-I know it sounds complicated but it's really not.
+Each pyramid has a square base, two vertical sides that were halves of the original sides, now cut along the diagonal.  The fourth and fifth sides slant down from the apex to the opposing sides.  Here are three views of one pyramid.
 
-\subsection*{real world}
+\begin{center}\includegraphics [scale=0.35] {pyr_proof1.png}\end{center}
 
-I found a fun way to do the demonstration easily and safely.  I was going to cut some wood on the table saw, but this is way better.
+On the right is a simple schematic way to draw pyramids, with perspective from the top.  The blue dot indicates the placement of the apex.
 
-Get a thick piece of cheese and cut out a cube as large as you can make it and with everything squared up as accurately as you can.
+\subsection*{a cheese pyramid}
+
+I found a fun method to do the demonstration easily and safely.  I was going to cut some wood on the table saw, but this is much better.
+
+Get a thick piece of cheese and cut out a cube as large as you can make it and with everything squared as close as you can.
 
 Then cut straight down on a diagonal all the way through the cube, resulting in two identical pieces.
 
-If you now take each of the pieces and orient them with the new angled surface resulting from the cut facing up, you can then make another diagonal cut straight down for each.  
+If you now take each of the pieces and orient them with the new angled surface resulting from the cut facing up, you can then make another diagonal cut straight down for each (that cut has just been made, in the figure).  
 
 \begin{center}\includegraphics [scale=0.75] {cheese2.png}\end{center}
 
-You will end up with a large piece and a small one.  Do the same with the other half.
+You can see that the second cut results in a large piece that has a square base (currently oriented to the left in the photo above), and a smaller piece with a triangular base, which is facing down and stays that way in the final arrangement.  
 
-It seems remarkable, but the two smaller ones can be assembled into a single shape identical to each of the large pieces.  
+The two small pieces are mirror images that can be glued together into a single shape identical to each of the large pieces.
 
 \begin{center}\includegraphics [scale=1.0] {cheese1.png}\end{center}
 
-You have thus de-constructed the cube into three identical pyramids.
+By this means we deconstruct the cube into three identical pyramids.  Good luck!  It is OK to eat the demonstration afterwards.
 
-Good luck!  It is OK to eat the demonstration afterwards.
+\subsection*{perspectives}
 
-\subsection*{triangular pyramid}
+Our dissection proves that a pyramid with a square base and the apex placed directly above one of the vertices of the base has 
 
-\begin{center}\includegraphics [scale=0.4] {triangular_pyramid.png}\end{center}
+\[ V = \frac{1}{3} \ Bh \]
 
-We have shown by dissection that a pyramid with a square base and the apex directly above one of the vertices of the base has $V = Bh/3$, where $B$ is the area of the base and $h$ is the height.  It certainly \emph{seems} reasonable that the shape of the base shouldn't matter for the result.
+where $B$ is the area of the base and $h$ is the height.  
 
-In the figure above, the first two shapes on the left are different views of our pyramid cut from cheese, drawn with the height extended to make it easier to see.
+Here is that sketch again.  The vertex lies directly above the edge labeled $h$.
 
-The next one, with the vertices labeled $OPQR$, is one of two identical halves constructed by bisecting the first shape.  Its base is triangular.  Clearly it is still the case that $V = Bh/3$, since halving the base gave two identical shapes with half the volume.
+\begin{center}\includegraphics [scale=0.35] {pyr_proof1.png}\end{center}
 
-On the right side, we have a triangular pyramid inscribed in a cone.  It's clear that the volume of the cone will be the summed volume of the inscribed pyramids, which as Archimedes showed, becomes the area of a circle, times the height.
+Solid lines outline the base, and the color of the line indicates whether that side meets the plane of the base in a right angle (black) or on a slant (red).  Because of the right angle, the solid black line hides the diagonal along the side up to the vertex.
 
-Both $OPQR$ and the shape we need have two vertical sides.  The only difference between them is that the vertex $Q$ on the base is a right angle, whereas the angles of the base of the pyramid on the right depend on the size of the slice.
+The other kind of diagonal (not overlying a side of the base) is shown as a dotted line. 
 
-We are very close, but haven't quite closed the gap.
+\subsection*{moving the apex}
 
-\subsection*{cone}
-
-A pyramid is not a cone.  But it will turn out that the volume is independent of the shape of the base.  It just depends on the area.  This is proved by what seem to be hand-waving arguments before calculus.
-
-For example, there is Cavalieri's principle, also called the \emph{method of indivisibles}, or the stack of quarters argument.
-\begin{center}\includegraphics [scale=0.2] {volume_cone_quarters.png}\end{center}
-
-If we slice a volume into small segments and then slide the slices around, the volume doesn't change.  So we expect that a pyramid and a right pyramid of the same base and height have the same volume, and this is in fact true.
-
-\url{https://en.wikipedia.org/wiki/Cavalieri's_principle}
+It is natural to look at other shapes for the base, and other placements for the apex.  This is a right square pyramid.  
 
 \begin{center}\includegraphics [scale=0.25] {volume_cone_rtpyr.png}\end{center}
 
-And there doesn't seem any reason why the shape of the base should matter either, only its area.  Hence we substitute a circular cross-section, i.e., a cone.
+The apex lies above the center of the base.  Here is the perspective view (below, left panel).
 
-For a cone we finally obtain
-\[ V =  \frac{1}{3} \pi r^2 h \]
+\begin{center}\includegraphics [scale=0.4] {pyr_proof2.png}\end{center}
 
-Knowing basic calculus allows us to see easily where the factor of one-third comes from in the formula for the volume of a pyramid or a cone.  It comes from integrating $x^2 \ dx$ and obtaining $x^3/3$.  Get there we will, young padawan.
+The point is that the right pyramid can be cut into four identical cheese pyramids (right panel).  Therefore the volume of each is one-fourth, and so is the base.  
 
-However, it is interesting to see how things might have been glimpsed in the age before calculus.
+We have proved the formula works for a right pyramid.
 
-If you want to peek at the argument we use in calculus, it is \hyperref[sec:vol_cone_calculus]{\textbf{here}}.
+The next question is how to prove that we can put the apex anywhere and still have the same volume.
 
-\subsection*{algebraic derivation of the constant 1/3}
+\begin{center}\includegraphics [scale=0.5] {pyr_proof3.png}\end{center}
 
-I found an algebraic argument on the web at 
+At the moment, I know how to turn that into a regular rectangle, but not into a square:
+
+\begin{center}\includegraphics [scale=0.4] {pyr_proof5.png}\end{center}
+
+\subsection*{triangular pyramid}
+It is also easy to show that a triangular base with the apex directly above a vertex obeys the  volume rule.
+
+\begin{center}\includegraphics [scale=0.4] {pyr_proof4.png}\end{center}
+
+We have two identical triangular pyramids, and half the base for each one.
+
+If we had rectangles, by using them we could produce a triangular base of any shape.  If necessary, we can put two together to form an isosceles base.
+
+In the figure below, on the left, is a view of that same pyramid cut from cheese, drawn with the height extended to make it easier to see.
+
+\begin{center}\includegraphics [scale=0.4] {pyr_proof7.png}\end{center}
+
+In the middle is one of two identical halves constructed by bisecting the square pyramid.  Its base has become triangular.  Clearly it is still the case that $V = Bh/3$, since halving the base gave two identical shapes each with half the volume.
+
+On the right side, we have a triangular pyramid inscribed in a cone.  The volume of the cone will be the summed volume of the inscribed pyramids, whose bases, as Archimedes showed, become the area of a circle.
+
+Both the triangular pyramid cut from cheese and the shape we need on the right have two vertical sides, at right angles to the plane of the base.  The  difference between them is that one vertex on the base is a right angle, whereas for the one we need, the angles of the base of the pyramid on the right depend on the size of the slice.
+
+We are close, but not there yet.
+
+Euclid proves the volume formula in book XII of the \emph{Elements}.  However, the proofs are much too long for us, and ultimately, this problem has a trivial solution in our first bit of calculus.
+
+\subsection*{cone}
+
+A pyramid is not a cone.  But we believe, based on these ideas, that the volume is independent of the shape of the base.  It just depends on the area.  
+
+There is another hand-waving argument from the age before calculus.  It is called Cavalieri's principle, also the \emph{method of indivisibles}, or the stack of quarters argument.
+\begin{center}\includegraphics [scale=0.2] {volume_cone_quarters.png}\end{center}
+
+\url{https://en.wikipedia.org/wiki/Cavalieri's_principle}
+
+Knowing basic calculus allows us to see easily where the factor of one-third comes from in the formula for the volume of a pyramid or a cone.  It comes from integrating $x^2 \ dx$ and obtaining $x^3/3$.  Get there we will, young padawan.  If you want to peek ahead, it is \hyperref[sec:vol_cone_calculus]{\textbf{here}}.
+
+\subsection*{algebraic derivation of the constant 1/3 for a cone}
+
+I found an algebraic derivation on the web at 
 
 \url{https://web.maths.unsw.edu.au/~mikeh/webpapers/paper47.pdf}
 
