@@ -109,7 +109,7 @@ We have
 
 \[ A =  \sqrt { 6 (6-5) (6-4) (6-3) } =  \sqrt { 6 (1) (2) (3) } = 6 \]
 
-\subsection*{Brahamgupta}
+\subsection*{Brahmagupta}
 
 Brahmagupta was an Indian mathematician who lived in the 7th century AD in a region of India called Bhinmal, which is in Rajastan.  He completed the square to obtain the quadratic equation, and did many other amazing things in trigonometry and arithmetic, as well as this example from geometry.
 
@@ -170,7 +170,7 @@ Second
 \[ = (a + b + (c - d))(a + b - (c - d)) \ (c + d + (a - b))(c + d - (a - b)) \ ] \]
 \[ = (a + b + c - d)(a + b - c + d)(c + d + a - b)(c + d - a + b) \]
 
-If the semiperimeter is $s$ then
+If the semi-perimeter is $s$ then
 \[ 2s = a + b + c + d \]
 
 So we have
@@ -180,6 +180,36 @@ So we have
 So lastly
 \[ A^2 = (s - a)(s - b)(s - c)(s - d) \]
 \[ A = \sqrt{(s - a)(s - b)(s - c)(s - d)} \]
+
+\subsection*{comparison}
+
+In comparing the two proofs, it's clear that Brahmagupta draws on the ideas of (i) using the semi-perimeter and (ii) difference of squares, which are in Heron's proof.  The main new idea is the law of cosines and the cancelation of $\sin^2 x + \cos^2 x$.
+
+We can see this by rewriting the proof of Heron's formula in Brahmagupta's style.  First, the law of cosines.  Let $\alpha$ be the angle opposite side $a$:
+
+\[ a^2 = b^2 + c^2 - 2bc \cos \alpha \]
+\[ (b^2 + c^2 - a^2)^2 = (2bc)^2 \cos^2 \alpha \]
+
+And the area is
+\[ A = (1/2) bc \sin \alpha \]
+\[ 4A = 2bc \sin \alpha \]
+\[ 16A^2 = (2bc)^2 \sin^2 \alpha \]
+
+Adding
+\[ 16A^2 + (b^2 + c^2 - a^2)^2 = (2bc)^2  \]
+\[ 16A^2 = (2bc)^2 - (b^2 + c^2 - a^2)^2  \]
+
+Now it's just a matter of two differences of squares:
+\[ 16A^2 = (2bc + (b^2 + c^2 - a^2))(2bc - (b^2 + c^2 - a^2)) \]
+\[ = ((b + c)^2 - a^2) \ (a^2 - (b - c)^2) \]
+\[ = (b + c + a)(b + c - a) \ (a + b - c)(a - b + c) \]
+
+Involving the semiperimeter (skipping over one step):
+\[ A^2 = s(s - a)(s - b)(s - c) \]
+
+$\square$
+
+
 
 
 \end{document}
