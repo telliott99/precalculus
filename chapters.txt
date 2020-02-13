@@ -68,6 +68,7 @@ Six functions
 Sum of angles
 Law of cosines
 Value of pi
+Value of pi revisited
 Heron and Brahmagupta
 
 Two basic operations in calculus
@@ -78,6 +79,16 @@ Limit concept
 Higher derivatives
 Differentials
 Fundamental theorem of calculus
+
+# Bonus
+
+Vectors
+Vector dot product
+Vector cross product
+Point and plane
+Geometric rotation
+Vector rotation
+Parametric equations
 
 Addendum
 References

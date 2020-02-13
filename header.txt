@@ -16,7 +16,7 @@
 
 %\setcounter{tocdepth}{0}
 
-\graphicspath{{/Users/telliott/Github/precalculus/fig/}}
+\graphicspath{{/Users/telliott/Github/fiures/}}
 
 \title{Precalculus}
 \author{Tom Elliott}
