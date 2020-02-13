@@ -1,9 +1,16 @@
 #! /bin/bash
 
-user="/Users/telliott"
-path=$user"/Github/precalculus"
+# modified to be generic
+
+user="$HOME"
+d=$(echo $0 | awk -F '/' '{ print $5 }')
+path=$HOME/Github/$d
 
 cd "$user/Desktop"
+
+pdf_path="$d.pdf"
+echo $path
+echo $pdf_path
 
 python $path/scripts/combine.py > IF.tex
 
@@ -11,9 +18,6 @@ python $path/scripts/combine.py > IF.tex
 pdflatex IF.tex >/dev/null
 pdflatex IF.tex >/dev/null
 pdflatex IF.tex >/dev/null
-
-pdf_path="Precalculus.pdf"
-
 
 cp IF.pdf "$user/Dropbox/- stuff/$pdf_path"
 mv IF.pdf "$path/$pdf_path"
