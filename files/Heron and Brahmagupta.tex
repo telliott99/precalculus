@@ -26,8 +26,8 @@ Heron's formula was later found to be a special case of a similar formula for qu
 \includegraphics [scale=0.4] {triangle3.png}
 \end{center}
 
-If $s$ is the semi-perimeter
-\[ s = \frac{1}{2}(a + b + c) \]
+If $s$ is one-half the perimeter, called the semi-perimeter, then
+\[ 2s = a + b + c \]
 then
 \[ A = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)} \]
 
@@ -43,21 +43,15 @@ Side $c$ is split into $x$ and $y$.  We can write three equations:
 \[ y^2 + h^2 = b^2 \]
 \[ x + y = c \]
 
-Our objective is an equation that contains only $a$, $b$ and $c$. Lockhart gives us a target for the first part of the derivation:
-
-\[ 2xc = c^2 + a^2 - b^2 \]
-
-Let's just start manipulating equations to get there.  Subtract the second from the first:
-\[ x^2 - y^2 = a^2 - b^2 \]
-Square the third
-\[ x^2 + 2xy + y^2 = c^2 \]
-
-Add the two new equations
-\[ 2x^2 + 2xy =  c^2 + a^2 - b^2 \]
-
-Substitute for $y$
-\[ 2x^2 + 2x(c-x) =  c^2 + a^2 - b^2 \]
-\[ 2xc = c^2 + a^2 - b^2  \]
+Our objective is an equation that contains only $a$, $b$ and $c$.  From the first two:
+\[ a^2 - b^2 = x^2 - y^2 \]
+and from the third:
+\[ y^2 = c^2 - 2xc + x^2 \]
+so
+\[ a^2 - b^2 = x^2 - c^2 + 2xc - x^2 \]
+\[ = 2xc - c^2 \]
+then
+\[ a^2 + c^2 - b^2 = 2xc \]
 
 Finally a slight rearrangement:
 \[ x = \frac{c^2 + a^2-b^2}{2c} = \frac{c}{2} + \frac{a^2-b^2}{2c}   \]
@@ -85,22 +79,25 @@ the algebraic form of this measurement is aesthetically unacceptable. First of a
 Here's a start:
 \[ 16A^2 = (2ac)^2 - (c^2 + a^2-b^2)^2 \]
 
-This is much better.  We notice that it is a difference of squares.  First
+This is much better.  We immediately notice that it is a difference of squares.  First
 \[ 16A^2 = \ [ \ 2ac + (c^2 + a^2-b^2) \ ] \ [ \ 2ac - (c^2 + a^2-b^2) \ ]  \]
 
 But that has within it two squares, namely $(a + c)^2$ in the first term on the right-hand side, and $(a - c)^2$ in the second.
 
-\[ = \ [ \ (a + c)^2 -b^2) \ ] \ [ \ b^2 - (a - c)^2 \ ]  \]
-\[ =  (a + c + b)(a + c - b)(b + a - c)(b - a + c) \]
+\[ 16A^2 = \ [ \ (a + c)^2 -b^2) \ ] \ [ \ b^2 - (a - c)^2 \ ]  \]
+\[ 16A^2 =  (a + c + b)(a + c - b)(b + a - c)(b - a + c) \]
 
-So
-\[ A = \sqrt{\frac{a + b + c}{2}  \cdot \frac{a + c - b}{2}  \cdot \frac{a + b - c}{2}  \cdot \frac{-a + b + c}{2} } \]
-
-At this point, we recognize the semi-perimeter $s = (a + b + c)/2$ and then we see that each of the other terms is $s$ minus one of the sides.  For example:
-\[ \frac{a + c + b}{2} - b = \frac{a + c + b - 2b}{2} = \frac{a + c - b}{2} \]
+At this point, we recognize the semi-perimeter $2s = a + b + c$ and then we see that each of the other terms is $s$ minus one of the sides.  For example:
+\[ a + c - b = 2s - 2b \]
 
 So we obtain
-\[ A = \sqrt{s \cdot (s - a) \cdot (s - b) \cdot (s - c) } \]
+\[ 16A^2 = 2s \cdot (2s - 2a) \cdot (2s - 2b) \cdot (2s - 2c) \]
+\[ A^2 = s \cdot (s - a)(s - b)(s - c) \]
+
+which you can of course write as the square root:
+\[ A = \sqrt{s \cdot (s - a)(s - b)(s - c)} \]
+
+
 \subsection*{check}
 As a simple example, if we have a right triangle with sides 3,4,5, then the area is one-half of 3 times 4 = 6.  The semi-perimeter is s
 
@@ -199,12 +196,14 @@ Adding
 \[ 16A^2 + (b^2 + c^2 - a^2)^2 = (2bc)^2  \]
 \[ 16A^2 = (2bc)^2 - (b^2 + c^2 - a^2)^2  \]
 
-Now it's just a matter of two differences of squares:
+This is what we had in the Lockhart derivation.  There is a slight difference because we have the term $(2bc)^2$ and we're subtracting $a^2$, but from the symmetry of the problem we know this is the same as having  $(2ac)^2$ and subtracting $b^2$.
+
+The rest is exactly as before, it's just a matter of two differences of squares:
 \[ 16A^2 = (2bc + (b^2 + c^2 - a^2))(2bc - (b^2 + c^2 - a^2)) \]
 \[ = ((b + c)^2 - a^2) \ (a^2 - (b - c)^2) \]
 \[ = (b + c + a)(b + c - a) \ (a + b - c)(a - b + c) \]
 
-Involving the semiperimeter (skipping over one step):
+Involving the semiperimeter (and skipping over one step):
 \[ A^2 = s(s - a)(s - b)(s - c) \]
 
 $\square$

@@ -25,6 +25,7 @@ In this chapter we're working with integers or just natural numbers.
 
 Doing division, computing $n/d$, means we want to find $q$ such that:
 \[ n = q \cdot d + r \]
+and we want $r \ge 0$ but $r < d$.
 
 An important special case is when $r = 0$.  We are concerned to know whether the division is \emph{even} or not:
 \[ n = q \cdot d, \ \ \ \ \ \ \frac{n}{d} = q \]
@@ -52,7 +53,7 @@ In the proof above, we used the principle that additional factors don't matter.
 
 In particular, powers of $10$ don't matter.  If $d|n$, then $d$ divides any multiple of $n$, such as $100 \cdot n$.
 
-\subsection*{trick for $3$ and $9$}
+\subsection*{divisibility by $3$ or $9$}
 
 It is very helpful to decide quickly whether a number $n$ is divisible by a given small prime number like $2, 3, 5, 7, 11$.
 
@@ -89,14 +90,14 @@ Do you see the trick there?
 
 So $123456789$ is evenly divisible by both $3$ and by $9$.
 
-\subsection*{trick for $7$}
+\subsection*{divisibility by $7$}
 
-There is also a trick for $7$.  Take the last digit of $n$ away from the number.  Then double it and subtract.  Repeat if necessary.  If you reach a multiple of $7$, then $7$ also divides the larger number.
+There is also a test for $7$.  Take the last digit of $n$ away from the number.  Then double it and subtract.  Repeat if necessary.  If you reach a multiple of $7$, then $7$ also divides the larger number.
 
 Example.
 
 Let $n = 3101$.  The last digit is $1$, double it and subtract:
-\[ 310 - 1 = 308 \]
+\[ 310 - 2 \cdot 1 = 308 \]
 Repeat
 \[ 30 - 16 = 14 \]
 So yes, $3101$ is divisible by $7$.  We can check pretty easily now that we know it's worth it.
@@ -121,9 +122,37 @@ So now we know that $7|n$ if and only if $7|m$.
 
 $\square$
 
+\subsection*{divisibility by $11$}
+
+Working from \emph{right to left}, add up the digits in odd positions and separately, the digits in even positions.  Subtract the larger from the smaller.  If the difference is a multiple of $11$ (including $0$), the number is divisible by $11$.
+
+For any number where the multiplication did not require you to carry a $1$, this is obvious.
+
+Examples:  $77$, $121$, $198$, $1441$.
+
+If you do have a carry:
+
+\begin{verbatim}
+11 x 256 = 2816
+6 + 8 = 14
+1 + 2 = 3
+14 - 3 = 11
+\end{verbatim}
+
+See the end for this special one:
+
+\begin{verbatim}
+11 x 123456789 = 1358024679
+9 + 6 + 2 + 8 + 3 = 28
+7 + 4 + 0 + 5 + 1 = 17
+28 - 17 = 11
+\end{verbatim}
+
+We won't prove this rule.
+
 \subsection*{distributive law}
 
-This is the \emph{distributive property} of multiplication over addition.  For any numbers $a,b,c$:
+The the \emph{distributive property} of multiplication over addition says that, for any numbers $a,b,c$:
 
 \[ a \cdot (b+c) = a \cdot b + a \cdot c \]
 

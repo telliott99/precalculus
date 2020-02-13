@@ -38,7 +38,7 @@ More geometry
 Polygons
 Similar triangles
 Special points
-Orthocenter
+Four points connected
 Hippocrates
 
 The real numbers
@@ -61,6 +61,7 @@ Circles again
 Parabola
 Ellipse
 Archimedes and quadrature
+Cubics
 
 Trigonometry
 Six functions
