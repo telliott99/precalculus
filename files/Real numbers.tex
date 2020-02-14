@@ -221,19 +221,33 @@ Implying that $\sqrt{2} < 1.5$.  At the third:
 
 Implying that $\sqrt{2} < 1.42$.  
 
-This process may be continued for as long as desired. 
+This process may be continued for as long as desired.
 
 We can never write down the decimal value of $\sqrt{2}$ exactly, but only approximate it to greater and greater precision.  It goes on forever.
 
-In carrying out this recursive process, suppose we know $1.41$ and we seek the next digit.  Rather than try all the digits in order starting with $1$, there is a better way.
+In carrying out this recursive process, suppose we know $1.41$ and we seek the next digit.  One way is to just try all the digits in order starting with $1$.
 
-Try to estimate the error from the previous round.  
+\url{https://gist.github.com/telliott99/79178d6752b6f7b9325476a64bc82953}
 
-For example $1.41^2 = 1.9881$ so we are short of $2.0000$ by $0.0119$.  
+In this Python code, I have dispensed with the decimal point to make the math easier.  We generate a sequence of integers starting with 
 
-$1.42^2 = 2.0164$ so the difference is $0.0283$ and the fraction of the difference that we're under is $119/283 = 0.4205$.  In fact, the next two digits of the approximation to $\sqrt{2}$ are $42$.
+\begin{verbatim}
+14
+141
+1414
+14142
+..
+\end{verbatim}
 
-However, we will see a much better method for obtaining this value later, called Newton's method.
+This code generates 1000 digits of the value instantly.
+
+However, rather than try all the digits in order starting with $1$, there is a better way, which is to try to estimate the error
+
+For example $141^2 = 19881$ so we are short of $20000$ by $119$.  
+
+$142^2 = 20164$ so the difference is $283$ and the fraction of the difference that we're under is $119/283 = 0.4205$.  In fact, the next two digits of the approximation to $\sqrt{2}$ are $42$.
+
+Rather than implement this idea, we will see a better method for obtaining the value in calculus, called the Newton or Newton-Raphson method.
 
 At the seventh place
 \[ 1.414213^2 = 1.9999984093689998.. < 2 \]

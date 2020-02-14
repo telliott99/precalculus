@@ -131,20 +131,21 @@ From this it follows that
 
 Let 
 \[ N = n - p_1 q_1 \]
+We known that $N$ is not abnormal (because $n$ is the smallest abnormal number).
 
-We know that $N > 0$ because of the result of the last section.
+We have that $N > 0$ because of the result of the last section.  We also know that $N < n$, since $p_1$ and $q_1$ are non-zero and we subtracted them from $n$.  So $0 < N < n$.
 
-We also know that $N < n$, since $p_1$ and $q_1$ are non-zero and we subtract them from $n$.  So $0 < N < n$.
-
-We also have that $N$ is not abnormal (because $n$ is the smallest abnormal number).
-
-We're given that $p_1 | n$ and so, from the above equality and our preliminary result about what factorization means, it must be that $p_1 | N$.  A similar result is true for $q_1$, namely $q_1 | N$.  
+We're given that $p_1 | n$ and so, from the above equality 
+\[ N = n - p_1 q_1 \]
+and our preliminary result about what factorization means, it must be that $p_1 | N$. The same is true for $q_1$, namely $q_1 | N$.  
 
 Hence both $p_1$ and $q_1$ appear in the unique factorization of $N$, so $p_1q_1 | N$.
 
-And then certainly, $p_1 q_1 | p_1 q_1$.  It follows that $p_1 q_1 | n$, using our preliminary result about factorization.  
+Certainly, $p_1 q_1$ divides itself, so it follows that $p_1 q_1 | n$, using our preliminary result about factorization.
 
-Hence, $q_1 = n/p_1$.  But $n/p_1$ is less than $n$ and has the unique prime factorization $p_2 \cdot p_3 \dots p_k$.
+Hence, $q_1| (n/p_1)$.  
+
+But $n/p_1$ is less than $n$ and has the unique prime factorization $p_2 \cdot p_3 \dots p_k$.
 
 Since $q_1$ is not a $p$, this is impossible.  
 
@@ -152,6 +153,6 @@ Hence there cannot be any abnormal numbers.
 
 $\square$
 
-As we said, this is \emph{fundamental theorem of arithmetic}, so it's worth a bit of effort for the proof.  If I lost you in the last part, just go through it more slowly, step by step.
+As we said, this is \emph{fundamental theorem of arithmetic}, so it's worth a bit of effort for the proof.
 
 \end{document}
