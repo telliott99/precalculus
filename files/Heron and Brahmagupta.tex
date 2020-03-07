@@ -18,6 +18,8 @@
 \begin{document}
 \maketitle
 \Large
+
+%[my-super-duper-separator]
 Heron (or Hero) of Alexandria lived in the first century AD.  He was primarily an engineer, but is also remembered for Heron's Formula, which can be used to compute the area of a triangle from the lengths of its sides.  It is a simple formula that does not explicitly include the altitude $h$ or the parts of side $c$.
 
 Heron's formula was later found to be a special case of a similar formula for quadrilaterals, discovered by Brahmagupta.
@@ -31,7 +33,7 @@ If $s$ is one-half the perimeter, called the semi-perimeter, then
 then
 \[ A = \sqrt{s \cdot (s-a) \cdot (s-b) \cdot (s-c)} \]
 
-Proof.
+\emph{Proof}.
 
 From Lockhart.
 
@@ -114,7 +116,7 @@ We consider a quadrilateral inscribed into a circle.  This is a special case, wh
 
 \begin{center} \includegraphics [scale=0.35] {brahmagupta.png} \end{center}
 
-We will prove that the area of this quadrilateral is given by Brahmagupta's formula:
+We will prove that the area of this quadrilateral is given by Brahmagupta's formula.
 
 \[ A = \sqrt{(s-a) \cdot (s-b) \cdot (s-c) \cdot (s-d)} \]
 Heron's formula is thus a special case where $d = 0$.
@@ -208,7 +210,38 @@ Involving the semiperimeter (and skipping over one step):
 
 $\square$
 
+\subsection*{example}
+Here is a problem where we can use Heron's formula:
+\begin{center} \includegraphics [scale=0.6] {keyboard.png} \end{center}
 
+The smaller 30-60-90 right triangle has a side labeled $1$.  
+
+Since $\sin 30^\circ = 1/2$, the side of the square has length $2$ so the square has area $4$.
+
+Using Heron's formula, the equilateral triangle has area
+\[ A_{eq} = \sqrt{3 \ (1)^3} = \sqrt{3} \]
+
+We get the base of the largest right triangle from the tangent of $60 ^\circ$.  
+\[ \tan \pi/3 = \frac{\sin \pi/3}{\cos \pi/3} = \frac{1/2}{\sqrt{3}/2} = \frac{1}{\sqrt{3}}  \]
+so
+\[ \frac{2}{\text{base}} = \frac{1}{\sqrt{3}} \]
+The base is $2\sqrt{3}$ and the area is then
+\[ A_{\ big T} = \frac{1}{2} \ 2 \sqrt{3} \cdot 2 = 2 \sqrt{3} \]
+
+Next is the small $\triangle EKR$.  Its base is 
+\[ \text{base} = 2 \ \cos \pi/6 = 2 \ \frac{\sqrt{3}}{2} = \sqrt{3} \]
+\[ A = \frac{1}{2} \ \sqrt{3} \cdot 1 = \frac{\sqrt{3}}{2} \]
+
+Finally, the last triangle is isosceles.  We know its diagonal is $\sqrt{3}$
+Let the side be $x$, then
+\[ \frac{x}{\sqrt{3}} = \frac{1}{\sqrt{2}} \]
+\[ x = \frac{\sqrt{3}}{\sqrt{2}} \]
+The area is
+\[ A = \frac{1}{2} x^2 = \frac{1}{2} \cdot \frac{3}{2} = \frac{3}{4} \]
+
+The total is
+\[ 4 + \sqrt{3} + 2 \sqrt{3} + \frac{\sqrt{3}}{2} + \frac{3}{4} \]
+which equals something.
 
 
 \end{document}

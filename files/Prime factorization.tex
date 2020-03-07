@@ -19,6 +19,8 @@
 \maketitle
 \Large
 
+%[my-super-duper-separator]
+
 We will prove that every integer has a unique \emph{prime factorization}.  This is also called \emph{the fundamental theorem of arithmetic}.
 
 \[ n = p_1 \cdot p_2 \dots p_k \]
@@ -32,11 +34,12 @@ Example:
 To compare two factorizations for uniqueness, we suppose they are sorted (say, from smallest to greatest).
 
 More examples for relatively small numbers:
-
-\[ 39 = 3 \cdot 13 \]
-\[ 144 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 3 \cdot 3 \]
-\[ 210 = 2 \cdot 3 \cdot 5 \cdot 7 \]
-\[ 2310 = 2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \]
+\begin{verbatim}
+ 39  = 3.13
+144  = 2.2.2.2.3.3
+210  = 2.3.5.7
+2310 = 2.3.5.7.11
+\end{verbatim}
 
 Sometimes the factors can be hard to find.
 
@@ -56,7 +59,7 @@ $3607$ and $3803$ are the two prime factors of that number, which once found, ar
 
 We will prove the unique prime factorization theorem.
 
-But before starting on that, remember that when we say that one integer \emph{evenly divides} another one, written as $a|n$ or $a$ is a factor of $n$, we mean there exists another integer $k$ such that
+But before starting on that, when we say that one integer \emph{evenly divides} another one, written as $a|n$ or $a$ is a factor of $n$, we mean there exists another integer $k$ such that
 
 \[ a \cdot k = n \]
 $a$ times $k$ is exactly equal to $n$ with no remainder.
@@ -80,7 +83,7 @@ Also, we can manually check all the numbers up to some reasonable lower limit, l
 
 Hardy and Wright (\emph{Theory of Numbers}, sect. 2:11) have a proof of prime factorization which I find quite elegant.
 
-Proof.
+\emph{Proof}.
 
 By contradiction.
 

@@ -19,6 +19,8 @@
 \maketitle
 \Large
 
+%[my-super-duper-separator]
+
 There is a big problem with rational numbers which you probably know:  some numbers cannot be expressed as the ratio of two integers, as a first example, the number which when multiplied by itself is equal to $2$, written $\sqrt{2}$.  
 
 The discovery that one cannot find integer $p$ and $q$ such that
@@ -321,6 +323,54 @@ Whether $r$ is rational or irrational
 \[ r^{\sqrt{2}} = (\sqrt{2}^{\sqrt{2}})^{\sqrt{2}} = \sqrt{2}^2 = 2 \]
 
 
-This property of the real (and even the rational) numbers, that there is no closest number to any given number, accounts for virtually all of the theoretical difficulties in calculus which are solved by the use of limits and the apparatus of $\delta$ and $\epsilon$ or alternatively, neighborhoods.  We will get to that in a bit.
+Not only the real but also the rational numbers, have the property that there is \emph{no closest number} to any given number.
+
+This accounts for virtually all of the theoretical difficulties in calculus which are solved by the use of limits and the apparatus of $\delta$ and $\epsilon$ or alternatively, neighborhoods.  
+
+\subsection*{intervals}
+
+We denote the numbers greater than $a$ and less than $b$ as lying in the interval $(a,b)$.  With parentheses, the interval described is \emph{open}, which means that it does not include the boundary values.
+
+To describe a \emph{closed} interval, write $[u,v]$.  This interval includes all the previous values, plus it also includes $a$ and $b$.
+
+\begin{center} \includegraphics [scale=0.5] {intervals.png} \end{center}
+
+On the number line, the red point is the value $a$ which is the left boundary of the intervals $(a,b)$ and $[a,b]$.  $a$ is included in the second but not the first.
+
+For a region in the plane, say a circle of radius $r$, the red point is on the boundary and the blue point is inside.  Such regions are called disks.  An open disk is shown with a dashed line as the boundary.
+
+Because of the density property described below, any interval such as
+\[ I = [0,1] \]
+contains an \emph{infinite} quantity of rational numbers.
+
+Furthermore, it is impossible to specify a number that is as close as possible to $0$.  There is no smallest possible number.
+
+Proof.
+
+Suppose there does exist a smallest positive number, call it $n$.
+\[ n = \frac{p}{q}, \ \ \ \ \ \ p,q \in \mathbb{N} \]
+Consider 
+\[ m = \frac{n}{2} = \frac{p}{2q} \]
+
+$m > 0$ (since all of $p,q,2$ are $> 0$) but $m < n$ since $2m = n$.
+
+This is a contradiction.
+
+Therefore, there is no smallest positive number.
+
+$\square$
+
+If someone says to specify a positive number very close to $0$, the question you must ask them is "how close do you want to be"?  For any $\epsilon$, no matter how small, it is possible to find a $\delta$ such that
+\[ 0 < \delta < \epsilon \]
+That's the whole game.
+
+\subsection*{density}
+Consider the set of all points
+\[ x = \frac{p}{10^n} \]
+for all natural numbers $n$ and integers $p$.
+
+It is clear that simply by increasing the value of $n$, we can construct a set of equally spaced rational numbers as tightly clustered as we wish.
+
+The rational numbers are said to be \emph{dense} on the number line.  
 
 \end{document}

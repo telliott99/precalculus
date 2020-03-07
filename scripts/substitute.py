@@ -7,6 +7,7 @@ pre = 'circ'
 sub = 'bullet'
 
 d = '/Users/telliott/Github/precalculus/files'
+
 for fn in os.listdir(d):
     path = '/'.join([d,fn])
     sL = list()

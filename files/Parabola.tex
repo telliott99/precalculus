@@ -19,6 +19,8 @@
 \maketitle
 \Large
 
+%[my-super-duper-separator]
+
 The parabola is one of a larger class of geometric figures called the conic sections.  
 \begin{center} \includegraphics [scale=0.4] {conic_sections2.png} \end{center}
 
@@ -163,9 +165,13 @@ Roots do not have to be integers (or even rational).  An arguably more productiv
 
 First, multiply through by $1/a$ and rearrange:
 \[ x^2 + \frac{b}{a} x = - \frac{c}{a} \]
+We want to write the left-hand side as a perfect square.  Something like
+\[ (x + p)^2 \]
+What should $p$ be?  The key insight is that if $p = b/2a$ then
+\[ (x + \frac{b}{2a})^2 = x^2 + \frac{b}{a}x + (\frac{b}{2a})^2 \]
+That third term is missing, but we can fix it.
 
-The key insight is to recognize that if we add $(b/2a)^2$ to both sides, the left-hand side will become a perfect square:
-\[ x^2 + \frac{b}{a} x + (\frac{b}{2a})^2 = -\frac{c}{a} + (\frac{b}{2a})^2 \]
+To maintain equality, add the same thing on the right-hand side:
 \[ (x + \frac{b}{2a})^2 = -\frac{c}{a} + (\frac{b}{2a})^2 \]
 \[ x + \frac{b}{2a} = \pm \sqrt{-\frac{c}{a} + (\frac{b}{2a})^2} \]
 
@@ -176,8 +182,23 @@ which can come out of the square root and then matches what's in the second term
 which we rearrange slightly to give the standard \emph{quadratic formula}:
 \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
 
+\subsection*{check the answer}
+We assert that when $x$ takes on those two values, it is a solution for
+\[ ax^2 + bx = -c \]
+Take the positive root and compute $ax^2$:
+\[ x = \frac{1}{2a} \ [ -b + \sqrt{b^2 - 4ac} \ ] \]
+\[ ax^2 = \frac{1}{4a} \ [ b^2 + -2 b \sqrt{b^2 - 4ac} + b^2 - 4ac \ ] \]
+and then for $bx$
+\[ bx = \frac{1}{2a} \ [ -b^2 + b \sqrt{b^2 - 4ac} \ ] \]
+multiply by $2$ on top and bottom on the right-hand side:
+\[ bx = \frac{1}{4a} \ [ -2b^2 + 2b \sqrt{b^2 - 4ac} \ ] \]
 
-\subsection*{part 1}
+All the terms of $bx$ cancel terms in $ax^2$.  What's left is
+\[ \frac{1}{4a} \ (- 4ac) = -c \]
+
+If we had started with the negative root, the square roots in both $ax^2$ and $bx$ would each change sign, but they would still be opposite signs and hence, cancel.
+
+\subsection*{slope, part 1}
 Consider the simplest parabola:  $y = x^2$.
 
 The point $(1,1)$ is on the curve, because $(x = 1, y = 1)$ satisfies the equation $y = x^2$.
@@ -287,7 +308,9 @@ The slope of the tangent line is $2ax'$ and in particular, at the point $(1,1)$,
 
 \subsection*{further comment}
 
-The slope of the parabola has some simple interesting properties.  For example, pick any two points $(x,y)$ and $(x',y')$ on our standard parabola.
+The slope of the parabola has some simple interesting properties.  
+
+For example, pick any two points $(x,y)$ and $(x',y')$ on our standard parabola.
 
 The slope of the line that connects those two points is equal to the slope of the parabola at the point whose $x$-value is halfway in between.  
 \begin{center} \includegraphics [scale=0.4] {para19.png} \end{center}

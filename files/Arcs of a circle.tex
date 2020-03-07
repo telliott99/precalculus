@@ -18,6 +18,8 @@
 \begin{document}
 \maketitle
 \Large
+
+%[my-super-duper-separator]
 \label{sec:generalized_arc}
 
 We have previously established some central facts about circles including Thales' theorem about the angle intercepting a half-arc of the circle being a right angle.  We will need some of these results later.
@@ -32,7 +34,9 @@ Consider the arc swept out by the angle $s$ in this figure (left panel).
 
 \begin{center} \includegraphics [scale=0.4] {arcs1.png} \end{center}
 
-We can prove that the measure of the angle $s$ is equal to one-half the arc swept out between P and Q.
+The measure of the angle $s$ is equal to one-half the arc swept out between P and Q.
+
+\emph{Proof}.
 
 Draw the diameter (right panel):
 By our previous work:
@@ -53,7 +57,11 @@ $\bullet$ \ another general case where the arc includes the diameter.
 
 \subsection*{arc without diameter}
 
-However, the theorem is true even if the angle does not include the diameter.  We use subtraction.
+However, the theorem is true even if the angle does not include the diameter.  
+
+\emph{Proof}.
+
+We use subtraction.
 
 \begin{center} \includegraphics [scale=0.4] {arcs2.png} \end{center}
 
@@ -73,14 +81,15 @@ As a corollary, any two angles with vertexes (vertices) on the circle that cut o
 and $t = t'$ (right panel).  So $u = u'$ by both the vertical angle theorem and by of the triangle sum theorem.  Therefore, the two triangles are similar.  We will come back to this.
 
 \subsection*{Intersecting chords}
-Given two chords, to prove:
-
+Given two chords
 \[ s = \frac{1}{2} (a + b) \]
 $s$ is the average of the two arc lengths.
 
 \begin{center} \includegraphics [scale=0.4] {arcs4.png} \end{center}
 
-Solution:  Draw a triangle (right panel, above).
+\emph{Proof}.
+
+Draw a triangle (right panel, above).
 \[ 2v = b \]
 \[ 2u = a \]
 The external angle is the sum of the two opposing interior angles.
@@ -92,10 +101,9 @@ Rather than having all three points on the circle, one point is now outside. We 
 
 \begin{center} \includegraphics [scale=0.4] {arcs5.png} \end{center}
 
-To prove:
 \[ s = \frac{1}{2} (a - b) \]
 
-Proof.
+\emph{Proof}.
 
 Draw the triangle.  By our previous work:
 \[ 2t = a \]
@@ -107,9 +115,13 @@ By the exterior angle theorem
 
 \subsection*{Chord segments}
 
+\label{sec:chord_segments}
+
 Finally, there is a simple algebraic relationship between chord segments. Draw two chords of the circle.
 
 \begin{center} \includegraphics [scale=0.4] {arcs6.png} \end{center}
+
+\emph{Proof}.
 
 Draw the two triangles.  The angles are equal to their primed counterparts ($s = s'$ and $t = t'$ because they subtend equal arcs, while $u = u'$ by the vertical angle theorem).  
 
@@ -123,6 +135,8 @@ For any two chords that cross in a circle, the products of the chord segments ar
 We can prove a similar theorem about chords extended from a circle.
 
 \begin{center} \includegraphics [scale=0.4] {arcs7.png} \end{center}
+
+\emph{Proof}.
 
 The two angles marked with red dots subtend the same arc, so they are equal.  The angle at vertex $T$ is shared, therefore $\triangle QST \cong \triangle PRT$.
 
@@ -138,7 +152,7 @@ A cyclic quadrilateral is a four-sided figure where all four vertices lie in a c
 
 $\triangle PQT \sim \triangle RST$.
 
-Proof.
+\emph{Proof}.
 
 $\phi'$ is the supplementary angle of $\phi$. 
 
@@ -147,10 +161,6 @@ $\phi'$ subtends arc $PQR$, therefore $\phi$ is equal to the angle at vertex $Q$
 Similarly, $\theta'$ subtends arc $QPS$, therefore $\theta$ is equal to the angle at vertex $P$.
 
 $\square$
-
-
-
-
 
 
 \end{document}
