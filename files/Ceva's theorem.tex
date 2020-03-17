@@ -23,7 +23,23 @@
 
 There are some special points in triangles including orthocenters, which we've already mentioned, but also circumcenters, incenters and centroids.
 
-They have the common feature that three lines are drawn crossing at a single point.  We need to establish the conditions under which this happens.
+They have the common feature that three lines can be drawn crossing at a single point.  We need to establish the conditions under which this happens.
+
+There is a special case that's easy.  The circumcenter is where the perpendicular bisectors of the sides intersect.
+
+\begin{center} \includegraphics [scale=0.25] {circumcenter_5.png} \end{center}
+
+\emph{Proof}.
+
+Construct the perpendicular bisector of side, $AB$, $OD$ and also of side $BC$, $OE$.  
+
+By the properties of the perpendicular bisector (the triangles $OAB$ and $OBC$ are isosceles), we have that $OA = OB$ and $OB = OC$. 
+
+But then $OA = OC$, so by congruent triangles, the point $O$ is on the perpendicular bisector of side $AC$.  Therefore the point $O$ is the point where all three lines cross.
+
+$\square$
+
+\subsection*{Ceva's theorem}
 
 Begin with the triangle shown below, picking a point $P$ to be \emph{any point} inside the triangle.  Now draw line segments from each vertex through $P$ and extend them to the opposing side.
 \begin{center} \includegraphics [scale=0.5] {Ceva1.png} \end{center}

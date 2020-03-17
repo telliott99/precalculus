@@ -96,29 +96,62 @@ Imagine a circle placed to the left of a graph.  I think of the sine function as
 
 \subsection*{visualization of all six functions}
 
-Consider a unit circle.  Extend the radius with the angle $\theta$ and then draw the vertical and horizontal tangents to the circle $a$ and $b$.  
+Let us work with a unit circle.  Draw the radius to form the angle $\theta$ and then draw the vertical and horizontal components which we know are $\sin \theta$ and $\cos \theta$. 
+\begin{center} \includegraphics [scale=0.4] {six_funcs_5.png} \end{center}
+By extending the radius, we can draw several other triangles which are similar to the original one.  The angle equalities follow from the vertical angle and alternate interior angle theorems.
 
-\begin{center} \includegraphics [scale=0.4] {sixfuncs1.png} \end{center}
-The original triangle with sides $x,y,r$ is similar to the triangle with sides $r,a,OP$, and both are similar to the triangle with sides $b,r,OQ$.
-\[ x,y,r \sim r,a,OP, \sim b,r,OQ \]
-By similar $\triangle$
-\[ \frac{a}{r} = \frac{y}{x} =  \tan \theta \]
-But $r=1$ so 
-\[ a = \tan \theta \]
-If you imagine a point moving around the circle $a$ will get very large as $\theta \to \pi/2$, and in fact, approaches $\infty$ there (becomes undefined).
+In the first quadrant, the similar triangle with opposite side $t$ has a tangent which is $t/1$, but by similar triangles this is just $\tan \theta$.  It is not an accident that this is also the tangent to the circle at the point where the radius meets it.
 
-The segment $OP$ is (by similar $\triangle$) to $r$ as
-\[ \frac{OP}{r} = \frac{r}{x} \]
-\[ OP = \frac{1}{\cos \theta} = \sec \theta \]
+A similar argument justifies the label $t$ on the triangle in the third quadrant.
 
-The horizontal from the y-axis to Q is $b$.  Consider $\theta$ near the top of the figure.  By similar $\triangle$, the relations we had were
-\[ r/b = y/x = \tan \theta  \]
-since $r = 1$
-\[ b = \frac{r}{\tan \theta} = \frac{1}{\tan \theta} = \cot \theta \]
-Finally
-\[ r/OQ = 1/OQ = \sin \theta \]
-\[ OQ = \frac{1}{\sin \theta} = \csc \theta \]
+If we label the origin as $O$ and consider the line segment $OQ$ and call that length $s$, we have that $1/s = \cos \theta$, so $s = \sec \theta$.
 
-\begin{center} \includegraphics [scale=0.4] {sixfuncs3.png} \end{center}
+There are two more.
+\begin{center} \includegraphics [scale=0.4] {six_funcs_5.png} \end{center}
+
+The horizontal length $c$ in the third quarter is the adjacent side for angle $\theta$ and the ratio with the opposite side which is also the radius of the circle is just $c$, but this is the inverse of the tangent, the cotangent, so $c = \cot \theta$.
+
+Finally, if $e$ is the length of the line segment $OP$, then
+\[ \cos \theta = \frac{c}{e} = \frac{\cot \theta}{e} = \frac{\cos \theta}{\sin \theta} \ \frac{1}{e} \]
+We have that $e$ is the inverse sine, known as the cosecant, and $e = \csc \theta$.
+
+Here is another version that is similar, from Proofs without words:
+\begin{center} \includegraphics [scale=0.3] {six_funcs_6.png} \end{center}
+
+This gives various identities simply, like
+\[ 1 + \tan^2 \theta = \sec^2 \theta \]
+\[ (1 + \tan \theta)^2 + (1 + \cot \theta)^2 = (\sec \theta + \csc \theta)^2 \]
+
+I've certainly never seen that last one, but we can try to prove it algebraically in reverse.
+\[ = 1 + 2 \tan \theta + \tan^2 \theta + 1 + 2 \cot \theta + \cot^2 \theta = \sec^2 \theta + 2 \sec \theta \csc \theta + \csc^2 \theta \]
+Since $1 + \tan^2 \theta = \sec^2 \theta$:
+\[ = 2 \tan \theta + 1 + 2 \cot \theta + \cot^2 \theta = 2 \sec \theta \csc \theta + \csc^2 \theta \]
+And $1 + \cot^2 \theta = \csc^2 \theta$ so:
+\[ = 2 \tan \theta + 2 \cot \theta = 2 \sec \theta \csc \theta \]
+Multiply by $\sin \theta \cos \theta$:
+\[ = 2 \sin^2 \theta + 2 \cos^2 \theta = 2 \]
+which is correct.
+
+\subsection*{chords of a circle}
+In our work on arcs and chords of a circle, we found that equal angles on the perimeter of the circle subtend equal arcs.  So, for example, in this figure the angle $s$ subtends the same arc in both panels, and a chord of the same length, regardless of where it intersects the perimeter.
+
+\begin{center} \includegraphics [scale=0.4] {circle_chord.png} \end{center}
+
+We also showed that, as in the right panel, the angle $APB$ is a right angle, since $AB$ is a diameter of the circle.  
+
+Therefore, $PB$ is the opposite side in a right triangle.  As a result:
+
+\[ \frac{PB}{2r} = \sin s \]
+and this is true whether or not one of the sides flanking $s$ is a diameter of the circle.
+
+A second proof of this is the following:  erect the perpendicular bisector of $PB$.
+\begin{center} \includegraphics [scale=0.4] {circle_chord_2.png} \end{center}
+
+The small triangle containing the dotted line as one edge and the vertex at $B$ is similar to the large triangle $ABP$, because the angle at the vertex $B$ is shared and the two sides $PB$ and $AB$ are in proportion.
+
+Therefore, the small triangle is a right triangle, the central angle is $s$, and now one-half of $PB$ divided by $r$ is the sine of $s$.
+\[ \sin s = \frac{PB/2}{r} = \frac{PB}{2r} \]
+
+$\square$
 
 \end{document}

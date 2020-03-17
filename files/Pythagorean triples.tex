@@ -1,0 +1,77 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott/Github/figures/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Pythagorean triples}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+%[my-super-duper-separator]
+
+In the previous chapter we derived what are called the double-angle formulas:
+\[ \sin 2s = 2 \sin s \cos s \]
+\[ \cos 2s = \cos^2 s - \sin^2 s \]
+
+We will manipulate these to find expressions in terms of the same variable, using the following identity:
+\[ \sin^2 \theta + \cos^2 \theta = 1 \]
+\[ \tan^2 \theta + 1 = \frac{1}{\cos^2 \theta} \]
+
+\subsection*{sine}
+
+\[ \sin 2s = 2 \sin s \cos s \]
+\[ = 2 \frac{\sin s}{\cos s} \cos^2 s \]
+\[ = 2 \tan s \ \frac{1}{1 + \tan^2 s} \]
+
+Let $a = \tan s$, then
+\[ \sin 2s = \frac{2a}{1 + a^2} \]
+
+\subsection*{cosine}
+
+\[ \cos 2s = \cos^2 s - \sin^2 s \]
+\[ = \ [ \ \frac{\cos^2 s}{\cos^2 s} - \frac{\sin^2 s}{\cos^2 s} \ ] \ \cos^2 s \]
+\[ = \ [ \ \frac{1 - \tan^2 s}{1 + \tan^2 s} \ ] \]
+ 
+so
+\[ \cos 2s = \frac{1 - a^2}{1 + a^2} \]
+
+\subsection*{triples}
+
+In general, $a$ can be anything.  But if $a$ is a rational number, then we can obtain the corresponding sides of a right triangle with rational lengths as well.  
+
+The sides are:  $2a, 1 - a^2$ with the hypotenuse:
+\[ \sqrt{4a^2 + (1 - 2a^2 + a^4)} \]
+\[ \sqrt{1 + 2a^2 + a^4)} \]
+\[ = 1 + a^2 \]
+
+Suppose $a = \frac{2}{3}$.  Then, we have side lengths:  $\frac{4}{3} = \frac{12}{9},\frac{5}{9}$, and $\frac{13}{9}$, which can be converted to integers:  $12, 5, 13$.
+
+In general, if $\tan s = p/q$ then the sides are
+\[ \frac{2p}{q}, \ \ \ \ \ \ 1 - \frac{p^2}{q^2}, \ \ \ \ \ \ 1 +\frac{p^2}{q^2} \]
+which as integers will be
+\[ 2pq, \ \ \ \ \ \ q^2 - p^2, \ \ \ \ \ \ q^2 + p^2 \]
+
+This formula was found by Euclid.
+
+\url{https://en.wikipedia.org/wiki/Pythagorean_triple}
+
+If $p$ and $q$ are two odd integers the sum and difference of squares is even so we can write
+\[ pq, \ \ \ \ \ \ \frac{q^2 - p^2}{2}, \ \ \ \ \ \ \frac{q^2 + p^2}{2} \]
+
+As another example, let $q = 5$, $p = 3$, and we have $15, 8, 17$, another triple.
+
+
+
+\end{document}

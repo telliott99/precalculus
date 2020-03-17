@@ -78,6 +78,7 @@ Pi
 Value of pi
 Value of pi revisited
 Archimedes and quadrature
+Pythagorean triples
 Cubics
 Continuum of numbers
 
