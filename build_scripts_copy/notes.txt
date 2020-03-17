@@ -1,0 +1,18 @@
+2-15-2020
+
+revised build process
+converted shell script to be generic
+today rename as build.sh
+
+also revised combine.py
+move both to ~/bin
+
+
+launch Terminal
+cd Desktop automatically
+
+> build.sh <title>
+
+
+tested with precalculus and with complex
+these are copies in ~/Github/build_scripts

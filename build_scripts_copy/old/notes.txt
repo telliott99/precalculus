@@ -1,0 +1,5 @@
+user="$HOME"
+d=$(echo $0 | awk -F '/' '{ print $5 }')
+path=$HOME/Github/$d
+
+Above extracts the project directory when the script is invoked
