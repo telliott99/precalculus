@@ -122,9 +122,44 @@ And what \emph{that} means is that the $y$-intercept is symmetrical with the ori
 And then finally, if the point on the parabola is $P$, the focus $F$, the intersection with the directrix $D$, and the $y$-intercept $I$
 
 \begin{center} \includegraphics [scale=0.4] {para18.png} \end{center}
-the quadrilateral $FPDI$ is a regular parallelogram with all four equal sides, and its long diagonal (the tangent line) makes equal angles with $FP$ and $PD$.
+the quadrilateral $FPDI$ is a parallelogram.  It looks like all four equal sides are equal.  Let's see.
+
+\emph{Proof}.
+
+The vertical distance from $P$ to the $x$-axis is $ax^2$, so $PD = ax^2 + p$.  Similarly, the vertical distance from $I$ up to the $y-$axis is also $ax^2$, so $IF = ax^2 + p = PD$.  
+
+$FP$ is the hypotenuse of a right triangle with sides $x$ and $ax^2 - p$.  $ID$ is the hypotenuse of a right triangle with the same sides.  Therefore $ID = FP$.  Therefore, $IFPD$ is a parallelogram.
+
+Finally, $FP = PD$, by the geometric definition of the parabola.  Therefore, $IFPD$ is a regular parallelogram.
+
+The length of $FP$ seems like it's not right, but it will turn out correctly.  It is
+\[ \sqrt{x^2 + (ax^2 - p)^2} \]
+
+Since we guess the answer, let us compute:
+\[ (ax^2 + p)^2 = ax^2 + 2apx^2 + p^2 \]
+\[ (ax^2 - p)^2 = ax^2 - 2apx^2 + p^2 \]
+
+The difference is $4apx^2 = x^2$.  So the root above is just
+\[ \sqrt{(ax^2 + p)^2} = ax^2 + p \]
+
+$\square$
+
+As the long diagonal of a parallelogram, the tangent line makes equal angles with $FP$ and $PD$.
 
 If $PD$ is extended vertically, the angle it makes with the tangent line is equal to the angle between $FP$ and the tangent line, so that for example, all vertical light rays entering a parabola will reflect and then come together at the focus.
+
+Before we go to straight analytic geometry one more point about the figure
+\begin{center} \includegraphics [scale=0.4] {para18.png} \end{center}
+
+The line passing through $P$ that is vertical to the tangent is called the \emph{normal} to the tangent.  It intersects the $y$-axis at a point above $P$.  We can calculate the additional distance $h$ by noting that the slope of this line is the negative inverse of $2ax$ and the distance along the $x$-axis is just $x$ so 
+\[ \Delta y = -\frac{2ax}{x} = - \frac{1}{2a} \]
+where $h = |\Delta y|$.  The $y$-intercept is $1/2a + ax^2$.
+
+A more subtle way of doing this is to draw similar triangles on this figure.  One in particular has base $x$ and height $h$ and hypotenuse equal to the length of the normal.  If you do this, you should be able to show that
+\[ \frac{h}{x} = \frac{x}{2ax^2} \]
+which leads directly to the same answer.
+
+What's most interesting about this is that the height of the intersection of the normal above the point $(x,y)$ is independent of $x$ and $y$.  It's just $1/2a$.  This makes sense because, as the parabola becomes more and more vertical, the distance in height gained by the normal becomes smaller and smaller as a fraction of $x$.
 
 \subsection*{analytic geometry}
 
